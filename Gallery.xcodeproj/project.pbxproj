@@ -17,6 +17,7 @@
 		26ACD3FF20C30D9500B3B5B3 /* ElemenetsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3FE20C30D9500B3B5B3 /* ElemenetsProviding.swift */; };
 		26ACD40120C30E2500B3B5B3 /* ElementsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD40020C30E2500B3B5B3 /* ElementsItem.swift */; };
 		26ACD40320C317C000B3B5B3 /* ElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD40220C317C000B3B5B3 /* ElementsViewController.swift */; };
+		26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD40520C31F2300B3B5B3 /* UIView+Autolayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		26ACD3FE20C30D9500B3B5B3 /* ElemenetsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElemenetsProviding.swift; sourceTree = "<group>"; };
 		26ACD40020C30E2500B3B5B3 /* ElementsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsItem.swift; sourceTree = "<group>"; };
 		26ACD40220C317C000B3B5B3 /* ElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsViewController.swift; sourceTree = "<group>"; };
+		26ACD40520C31F2300B3B5B3 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,17 @@
 				26ACD3FE20C30D9500B3B5B3 /* ElemenetsProviding.swift */,
 				26ACD40020C30E2500B3B5B3 /* ElementsItem.swift */,
 				26ACD40220C317C000B3B5B3 /* ElementsViewController.swift */,
+				26ACD40420C31F0F00B3B5B3 /* Utilities */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		26ACD40420C31F0F00B3B5B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				26ACD40520C31F2300B3B5B3 /* UIView+Autolayout.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */,
 				26ACD3FF20C30D9500B3B5B3 /* ElemenetsProviding.swift in Sources */,
 				26ACD40320C317C000B3B5B3 /* ElementsViewController.swift in Sources */,
+				26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */,
 				26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */,
 				26ACD3EF20C2E1A400B3B5B3 /* Item.swift in Sources */,
 			);

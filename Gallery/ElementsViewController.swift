@@ -56,12 +56,7 @@ final class ElementsViewController: UIViewController, UICollectionViewDataSource
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView)
-        NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
+        collectionView.alignAllEdgesWithSuperview()
     }
 
     // MARK: - UICollectionViewDataSource
@@ -132,12 +127,7 @@ private final class ElementCollectionViewCell: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
 
-        var constraints = [
-            view.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            view.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            view.topAnchor.constraint(equalTo: container.topAnchor),
-            view.bottomAnchor.constraint(equalTo: container.bottomAnchor)
-        ]
+        var constraints = view.constraintsForAligningAllEdgesWithSuperview()
 
         if let width = element.width {
             constraints.append(view.widthAnchor.constraint(equalToConstant: width))
