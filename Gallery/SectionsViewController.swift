@@ -102,6 +102,13 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
     }
 }
 
+extension SectionsViewController {
+    public convenience init(items: [Item]) {
+        let section = Section(title: "All elements", items: items)
+        self.init(sections: [section])
+    }
+}
+
 private extension String {
     static let cell = "cell"
 }
