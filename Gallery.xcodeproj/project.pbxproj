@@ -12,6 +12,7 @@
 		26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3EC20C2E19D00B3B5B3 /* Section.swift */; };
 		26ACD3EF20C2E1A400B3B5B3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3EE20C2E1A400B3B5B3 /* Item.swift */; };
 		26ACD3F120C2E34C00B3B5B3 /* CustomViewControllerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3F020C2E34C00B3B5B3 /* CustomViewControllerItem.swift */; };
+		26ACD3F920C3084A00B3B5B3 /* SectionsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3F820C3084A00B3B5B3 /* SectionsItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		26ACD3EC20C2E19D00B3B5B3 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		26ACD3EE20C2E1A400B3B5B3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		26ACD3F020C2E34C00B3B5B3 /* CustomViewControllerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewControllerItem.swift; sourceTree = "<group>"; };
+		26ACD3F820C3084A00B3B5B3 /* SectionsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				26ACD3EC20C2E19D00B3B5B3 /* Section.swift */,
 				26ACD3EE20C2E1A400B3B5B3 /* Item.swift */,
 				26ACD3F020C2E34C00B3B5B3 /* CustomViewControllerItem.swift */,
+				26ACD3F820C3084A00B3B5B3 /* SectionsItem.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26ACD3F120C2E34C00B3B5B3 /* CustomViewControllerItem.swift in Sources */,
+				26ACD3F920C3084A00B3B5B3 /* SectionsItem.swift in Sources */,
 				26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */,
 				26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */,
 				26ACD3EF20C2E1A400B3B5B3 /* Item.swift in Sources */,
