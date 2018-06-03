@@ -34,6 +34,33 @@ public struct StaticSection: Section {
     public func setSectionChange(handler: @escaping () -> Void) {}
     public init(title: String, items: [Item]) {
         self.title = title
-        self.items = items
+        self.items = items.map { NestedItem(item: $0, sectionTitle: title) }
+    }
+}
+
+struct NestedItem: Item {
+
+    var identifier: String {
+        return sectionTitle + "/" + item.identifier
+    }
+
+    var title: String {
+        return item.title
+    }
+
+    var subtitle: String? {
+        return item.subtitle
+    }
+
+    func present(from viewController: UIViewController) {
+        item.present(from: viewController)
+    }
+
+    private let item: Item
+    private let sectionTitle: String
+
+    init(item: Item, sectionTitle: String) {
+        self.item = item
+        self.sectionTitle = sectionTitle
     }
 }

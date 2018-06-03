@@ -24,11 +24,25 @@
 
 import UIKit
 
+public protocol Identifiable {
+    var identifier: String { get }
+}
+
 public protocol Presentable {
     func present(from viewController: UIViewController)
 }
 
-public protocol Item: Presentable {
+public protocol Item: Identifiable, Presentable {
     var title: String { get }
     var subtitle: String? { get }
+}
+
+extension Item {
+    public var identifier: String {
+        var result = title
+        if let subtitle = subtitle {
+            result += "(" + subtitle + ")"
+        }
+        return result
+    }
 }
