@@ -51,7 +51,7 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
         tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: .cell)
+        tableView.register(SectionCell.self, forCellReuseIdentifier: .cell)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
@@ -82,12 +82,9 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: .cell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: .cell, for: indexPath) as! SectionCell
         let item = getItem(at: indexPath)
-        cell.textLabel!.text = item.title
-        if let subtitle = item.subtitle {
-            cell.detailTextLabel!.text = subtitle
-        }
+        cell.setItem(item)
         return cell
     }
 
