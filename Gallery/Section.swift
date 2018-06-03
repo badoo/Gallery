@@ -22,10 +22,16 @@
  THE SOFTWARE.
  */
 
-public struct Section {
-    let title: String
-    let items: [Item]
+public protocol Section {
+    var title: String { get }
+    var items: [Item] { get }
+    func setSectionChange(handler: @escaping () -> Void)
+}
 
+public struct StaticSection: Section {
+    public let title: String
+    public let items: [Item]
+    public func setSectionChange(handler: @escaping () -> Void) {}
     public init(title: String, items: [Item]) {
         self.title = title
         self.items = items

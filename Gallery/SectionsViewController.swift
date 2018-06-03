@@ -56,6 +56,12 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         tableView.alignAllEdgesWithSuperview()
+
+        for (index, section) in sections.enumerated() {
+            section.setSectionChange { [weak self] in
+                self?.tableView.reloadSections(IndexSet(integer: index), with: .automatic)
+            }
+        }
     }
 
     // MARK: - UITableViewDelegate
@@ -99,7 +105,7 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
 
 extension SectionsViewController {
     public convenience init(items: [Item]) {
-        let section = Section(title: "All elements", items: items)
+        let section = StaticSection(title: "All elements", items: items)
         self.init(sections: [section])
     }
 }
