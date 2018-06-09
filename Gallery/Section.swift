@@ -47,8 +47,13 @@ private struct NestedItem: Item {
     var title: String {
         return item.title
     }
+
     var subtitle: String? {
         return item.subtitle
+    }
+
+    var subitems: [Item] {
+        return item.subitems
     }
 
     func present(from viewController: UIViewController) {

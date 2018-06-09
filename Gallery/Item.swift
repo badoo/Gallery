@@ -59,10 +59,14 @@ public protocol Item: Presentable {
     var identifier: ItemIdentifier { get }
     var title: String { get }
     var subtitle: String? { get }
+    var subitems: [Item] { get }
 }
 
 extension Item {
     public var identifier: ItemIdentifier {
         return ItemIdentifier(title: title, subtitle: subtitle)
+    }
+    public var subitems: [Item] {
+        return []
     }
 }
