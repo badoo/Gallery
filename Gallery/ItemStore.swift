@@ -22,18 +22,30 @@
  THE SOFTWARE.
  */
 
-public struct Globals {
-    private static var _shared: Globals?
-    static var shared: Globals {
-        guard let globals = _shared else {
-            fatalError("Please setup globals before use")
+public struct ItemStore {
+    private let rootSections: [Section]
+    private var allItems: [ItemIdentifier: Item]
+
+    public init(rootSections: [Section]) {
+        self.rootSections = rootSections
+        var dict: [ItemIdentifier: Item] = [:]
+        let flatten = rootSections.flatMap { $0.items }.flattenItems()
+        for item in flatten {
+            let id = item.identifier
+            assert(dict[id] == nil, "Found items with same identifiers")
+            dict[id] = item
         }
-        return globals
+        self.allItems = dict
     }
+}
 
-    let itemStore: ItemStore
-
-    public static func setup(itemStore: ItemStore) {
-        _shared = Globals(itemStore: itemStore)
+private extension Sequence where Element == Item {
+    func flattenItems() -> [Item] {
+        var result: [Item] = []
+        for item in self {
+            result.append(item)
+            result += item.subitems.flattenItems()
+        }
+        return result
     }
 }
