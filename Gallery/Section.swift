@@ -38,16 +38,15 @@ public struct StaticSection: Section {
     }
 }
 
-struct NestedItem: Item {
+private struct NestedItem: Item {
 
-    var identifier: String {
-        return sectionTitle + "/" + item.identifier
-    }
+    private let item: Item
+
+    let identifier: ItemIdentifier
 
     var title: String {
         return item.title
     }
-
     var subtitle: String? {
         return item.subtitle
     }
@@ -56,11 +55,8 @@ struct NestedItem: Item {
         item.present(from: viewController)
     }
 
-    private let item: Item
-    private let sectionTitle: String
-
     init(item: Item, sectionTitle: String) {
+        self.identifier = ItemIdentifier(id: item.identifier, sectionTitle: sectionTitle)
         self.item = item
-        self.sectionTitle = sectionTitle
     }
 }

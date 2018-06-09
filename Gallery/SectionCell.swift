@@ -28,7 +28,7 @@ final class SectionCell: UITableViewCell {
 
     private let favoritesButton: UIButton
 
-    private var itemId: String?
+    private var itemId: ItemIdentifier?
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         favoritesButton = UIButton()

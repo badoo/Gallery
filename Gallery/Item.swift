@@ -24,25 +24,45 @@
 
 import UIKit
 
-public protocol Identifiable {
-    var identifier: String { get }
+public struct ItemIdentifier: Hashable {
+    private let itemId: String
+    private let sections: [String]
+
+    init(title: String, subtitle: String? = nil) {
+        var id = title
+        if let subtitle = subtitle {
+            id += "(" + subtitle + ")"
+        }
+        itemId = id
+        sections = []
+    }
+
+    init(id: ItemIdentifier, sectionTitle: String) {
+        self.itemId = id.itemId
+        var sections = id.sections
+        sections.append(sectionTitle)
+        self.sections = sections
+    }
+
+    public var hashValue: Int {
+        var result = sections
+        result.append(itemId)
+        return result.joined(separator: "/").hashValue
+    }
 }
 
 public protocol Presentable {
     func present(from viewController: UIViewController)
 }
 
-public protocol Item: Identifiable, Presentable {
+public protocol Item: Presentable {
+    var identifier: ItemIdentifier { get }
     var title: String { get }
     var subtitle: String? { get }
 }
 
 extension Item {
-    public var identifier: String {
-        var result = title
-        if let subtitle = subtitle {
-            result += "(" + subtitle + ")"
-        }
-        return result
+    public var identifier: ItemIdentifier {
+        return ItemIdentifier(title: title, subtitle: subtitle)
     }
 }
