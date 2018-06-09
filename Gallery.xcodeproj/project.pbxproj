@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3620CC5A4E009C3E34 /* Globals.swift */; };
 		26ACD3E420C2D01F00B3B5B3 /* Gallery.h in Headers */ = {isa = PBXBuildFile; fileRef = 26ACD3E220C2D01F00B3B5B3 /* Gallery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3EA20C2D99F00B3B5B3 /* SectionsViewController.swift */; };
 		26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD3EC20C2E19D00B3B5B3 /* Section.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2670FD3620CC5A4E009C3E34 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		26ACD3DF20C2D01F00B3B5B3 /* Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26ACD3E220C2D01F00B3B5B3 /* Gallery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gallery.h; sourceTree = "<group>"; };
 		26ACD3E320C2D01F00B3B5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				26ACD3E220C2D01F00B3B5B3 /* Gallery.h */,
 				26ACD3E320C2D01F00B3B5B3 /* Info.plist */,
+				2670FD3620CC5A4E009C3E34 /* Globals.swift */,
 				26ACD41520C455F300B3B5B3 /* SectionCell.swift */,
 				26ACD3EA20C2D99F00B3B5B3 /* SectionsViewController.swift */,
 				26ACD3EC20C2E19D00B3B5B3 /* Section.swift */,
@@ -180,6 +183,7 @@
 				26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */,
 				26ACD3FF20C30D9500B3B5B3 /* ElemenetsProviding.swift in Sources */,
 				26ACD40320C317C000B3B5B3 /* ElementsViewController.swift in Sources */,
+				2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */,
 				26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */,
 				26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */,
 				26ACD3EF20C2E1A400B3B5B3 /* Item.swift in Sources */,
