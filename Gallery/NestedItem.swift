@@ -49,6 +49,10 @@ struct NestedItem: Item {
         return item.subitems
     }
 
+    var image: UIImage? {
+        return item.image
+    }
+
     var preferredPresentationStyle: ItemPreferredPresentationStyle {
         return item.preferredPresentationStyle
     }

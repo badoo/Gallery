@@ -65,6 +65,7 @@ public protocol Item: ViewControllerProviding {
     var title: String { get }
     var subtitle: String? { get }
     var subitems: [Item] { get }
+    var image: UIImage? { get }
     var preferredPresentationStyle: ItemPreferredPresentationStyle { get }
 }
 
@@ -77,6 +78,9 @@ extension Item {
     }
     public var subitems: [Item] {
         return []
+    }
+    public var image: UIImage? {
+        return nil
     }
 }
 
