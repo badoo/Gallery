@@ -27,8 +27,10 @@ import UIKit
 final class SectionCell: UITableViewCell {
 
     private let favoritesButton: UIButton
+    private let favoritesService = Globals.shared.favoritesService
 
     private var itemId: ItemIdentifier?
+    private var favoritesObserver: ObserverProtocol?
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         favoritesButton = UIButton()
@@ -59,16 +61,17 @@ final class SectionCell: UITableViewCell {
         if let subtitle = item.subtitle {
             detailTextLabel!.text = subtitle
         }
-        updateFavoritesButtonState()
+        let observable = favoritesService.observeIsFavorite(id: itemId!)
+        setIsFavorite(observable.value)
+        favoritesObserver = observable.observe { [weak self] isFavorite in
+            self?.setIsFavorite(isFavorite)
+        }
     }
 
     @objc
     private func didTapFavoritesButton() {
-        // TODO: Update favorites state
-    }
-
-    private func updateFavoritesButtonState() {
-        // TODO: get favorites state
+        guard let id = itemId else { return }
+        favoritesService.toggleFavorites(id: id)
     }
 
     private func setIsFavorite(_ isFavorite: Bool) {
