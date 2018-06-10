@@ -28,7 +28,12 @@ final class TabViewController: UITabBarController {
 
     init(items: [Item]) {
         super.init(nibName: nil, bundle: nil)
-        self.setViewControllers(items.map { $0.preparedViewController() }, animated: false)
+        let viewControllers: [UIViewController] = items.map { item in
+            let controller = item.preparedViewController()
+            controller.tabBarItem.image = item.image
+            return controller
+        }
+        self.setViewControllers(viewControllers, animated: false)
     }
 
     required init?(coder aDecoder: NSCoder) {

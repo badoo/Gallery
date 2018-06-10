@@ -32,8 +32,12 @@ public struct SectionsItem: Item {
 
     // MARK: - Instantiation
 
-    public init(title: String, subtitle: String? = nil, sections: [Section]) {
+    public init(title: String,
+                subtitle: String? = nil,
+                image: UIImage? = nil,
+                sections: [Section]) {
         self.title = title
+        self.image = image
         self.subtitle = subtitle
         self.sections = sections
     }
@@ -41,6 +45,7 @@ public struct SectionsItem: Item {
     // MARK: - Item
 
     public let title: String
+    public let image: UIImage?
     public let subtitle: String?
 
     public var subitems: [Item] {
