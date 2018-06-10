@@ -23,13 +23,13 @@
  */
 
 public struct ItemStore {
-    let rootSections: [Section]
+    let rootItem: Item
     let allItems: [ItemIdentifier: Item]
 
-    public init(rootSections: [Section]) {
-        self.rootSections = rootSections
+    public init(rootItem: Item) {
+        self.rootItem = rootItem
         var dict: [ItemIdentifier: Item] = [:]
-        let flatten = rootSections.flatMap { $0.items }.flattenItems()
+        let flatten = rootItem.subitems.flattenItems()
         for item in flatten {
             let id = item.identifier
             assert(dict[id] == nil, "Found items with same identifiers")

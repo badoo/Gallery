@@ -27,9 +27,6 @@ import UIKit
 public struct RootViewControllerFactory {
     public init() {}
     public func makeRootViewController() -> UIViewController {
-        let rootSections = Globals.shared.itemStore.rootSections
-        let sectionsController = SectionsViewController(sections: rootSections)
-        let navigation = UINavigationController(rootViewController: sectionsController)
-        return navigation
+        return Globals.shared.itemStore.rootItem.preparedViewController()
     }
 }

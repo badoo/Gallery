@@ -79,3 +79,16 @@ extension Item {
         return []
     }
 }
+
+extension Item {
+    func preparedViewController() -> UIViewController {
+        let controller = viewController()
+        controller.title = title
+        switch preferredPresentationStyle {
+        case .push where !(controller is UINavigationController):
+            return UINavigationController(rootViewController: controller)
+        default:
+            return controller
+        }
+    }
+}
