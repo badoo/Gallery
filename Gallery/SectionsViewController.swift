@@ -69,7 +69,7 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = getItem(at: indexPath)
-        present(item: item)
+        item.presentWithPreferredStyle(from: self)
     }
 
     // MARK: - UITableViewDataSource
@@ -96,29 +96,8 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
 
     // MARK: - Private methods
 
-    private func present(item: Item) {
-        let viewController = item.viewController()
-        switch item.preferredPresentationStyle {
-        case .push:
-            guard let navigationController = navigationController else {
-                assertionFailure("SectionsViewController should be presented inside of navigation controller")
-                fallthrough
-            }
-            navigationController.pushViewController(viewController, animated: true)
-        case .present:
-            self.present(viewController, animated: true, completion: nil)
-        }
-    }
-
     private func getItem(at indexPath: IndexPath) -> Item {
         return sections[indexPath.section].items[indexPath.row]
-    }
-}
-
-extension SectionsViewController {
-    public convenience init(items: [Item]) {
-        let section = StaticSection(title: "All elements", items: items)
-        self.init(sections: [section])
     }
 }
 

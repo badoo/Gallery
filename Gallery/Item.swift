@@ -81,6 +81,20 @@ extension Item {
 }
 
 extension Item {
+    func presentWithPreferredStyle(from viewController: UIViewController) {
+        let controller = self.viewController()
+        switch preferredPresentationStyle {
+        case .push:
+            guard let navigationController = viewController.navigationController else {
+                assertionFailure()
+                fallthrough
+            }
+            navigationController.pushViewController(controller, animated: true)
+        case .present:
+            viewController.present(controller, animated: true, completion: nil)
+        }
+    }
+
     func preparedViewController() -> UIViewController {
         let controller = viewController()
         controller.title = title
