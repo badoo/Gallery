@@ -32,8 +32,13 @@ public struct Globals {
     }
 
     let itemStore: ItemStore
+    let favoritesService: FavoritesServiceProtocol
+    let favoritesProvider: FavoritesProviding
 
     public static func setup(itemStore: ItemStore) {
-        _shared = Globals(itemStore: itemStore)
+        let favoritesService = FavoritesService(store: itemStore)
+        _shared = Globals(itemStore: itemStore,
+                          favoritesService: favoritesService,
+                          favoritesProvider: favoritesService)
     }
 }

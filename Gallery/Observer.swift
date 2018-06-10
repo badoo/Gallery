@@ -24,6 +24,45 @@
 
 protocol ObserverProtocol: class {}
 
+final class Observable<T> {
+    private(set) var value: T
+    private var observers: [ObserverWrapper<T>] = []
+
+    init(_ value: T) {
+        self.value = value
+    }
+
+    func setValue(_ value: T) {
+        self.value = value
+        for observer in observers {
+            observer.closure(value)
+        }
+    }
+
+    func observe(didChange: @escaping (T) -> Void) -> ObserverProtocol {
+        let observer = ObserverWrapper(closure: didChange)
+        observers.append(observer)
+        return Disposable { [weak self] in
+            guard let sself = self else { return }
+            guard let index = sself.observers.index(of: observer) else { return }
+            sself.observers.remove(at: index)
+        }
+    }
+}
+
+private final class ObserverWrapper<T>: Equatable {
+
+    let closure: (T) -> Void
+
+    init(closure: @escaping (T) -> Void) {
+        self.closure = closure
+    }
+
+    static func == (lhs: ObserverWrapper<T>, rhs: ObserverWrapper<T>) -> Bool {
+        return lhs === rhs
+    }
+}
+
 final class Disposable: ObserverProtocol {
 
     private let onDeinit: () -> Void

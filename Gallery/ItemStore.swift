@@ -23,8 +23,8 @@
  */
 
 public struct ItemStore {
-    private let rootSections: [Section]
-    private var allItems: [ItemIdentifier: Item]
+    let rootSections: [Section]
+    let allItems: [ItemIdentifier: Item]
 
     public init(rootSections: [Section]) {
         self.rootSections = rootSections
