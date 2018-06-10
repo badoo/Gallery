@@ -31,29 +31,19 @@ protocol SectionsDataProviderDelegate: class {
 
 final class SectionsDataProvider {
 
-    private let sections: [Section]
-    private var nonEmptySections: [Section] {
+    private let sections: [SearchSection]
+    private var nonEmptySections: [SearchSection] {
         return sections.filter { !$0.items.isEmpty }
     }
 
     weak var delegate: SectionsDataProviderDelegate?
 
     init(sections: [Section]) {
-        self.sections = sections
+        self.sections = sections.map(SearchSection.init)
 
-        for (index, section) in sections.enumerated() {
-            section.setSectionChange { [weak self] oldCount, newCount in
-                guard let delegate = self?.delegate else { return }
-                switch (oldCount, newCount) {
-                case let (old, new) where old == new:
-                    delegate.didChangeRowsInside(section: index)
-                case (0, _):
-                    delegate.didInsertSection(at: index)
-                case (_, 0):
-                    delegate.didRemoveSection(at: index)
-                default:
-                    delegate.didChangeRowsInside(section: index)
-                }
+        for section in self.sections {
+            section.setSectionChange { [weak self] _, _ in
+                self?.delegate?.didReloadData()
             }
         }
     }
@@ -74,4 +64,78 @@ final class SectionsDataProvider {
         return nonEmptySections[section].items[index]
     }
 
+    func filter(text: String) {
+        for section in sections {
+            section.filter(text: text)
+        }
+    }
+
+    func cancelSearch() {
+        for section in sections {
+            section.cancelSearch()
+        }
+    }
+}
+
+private final class SearchSection: Section {
+
+    private let section: Section
+    private var filteredItems: [Item] = []
+
+    // MARK: - Instantiation
+
+    init(section: Section) {
+        self.section = section
+        updateFilteredItems()
+    }
+
+    // MARK: - SearchSection
+
+    private var searchText: String?
+
+    func filter(text: String) {
+        searchText = text
+        updateFilteredItems()
+    }
+
+    func cancelSearch() {
+        searchText = nil
+        updateFilteredItems()
+    }
+
+    // MARK: - Section
+
+    var title: String {
+        return section.title
+    }
+
+    var items: [Item] {
+        return filteredItems
+    }
+
+    func setSectionChange(handler: @escaping Section.ChangeHandler) {
+        section.setSectionChange { [weak self] oldCount, newCount in
+            self?.updateFilteredItems()
+            handler(oldCount, newCount)
+        }
+    }
+
+    // MARK: - Private methods
+
+    private func updateFilteredItems() {
+        guard let text = searchText else {
+            filteredItems = section.items
+            return
+        }
+        filteredItems = section.items.filter { item in
+            if item.title.localizedStandardContains(text) {
+                return true
+            }
+
+            if let subtitle = item.subtitle, subtitle.localizedStandardContains(text) {
+                return true
+            }
+            return false
+        }
+    }
 }

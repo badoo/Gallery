@@ -24,7 +24,12 @@
 
 import UIKit
 
-final class SectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SectionsDataProviderDelegate {
+final class SectionsViewController: UIViewController,
+                                    UITableViewDelegate,
+                                    UITableViewDataSource,
+                                    UISearchResultsUpdating,
+                                    SectionsDataProviderDelegate {
+
 
     // MARK: - Private properties
 
@@ -56,6 +61,10 @@ final class SectionsViewController: UIViewController, UITableViewDelegate, UITab
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         tableView.alignAllEdgesWithSuperview()
+
+        if #available(iOS 11, *) {
+            addSearch()
+        }
     }
 
     // MARK: - UITableViewDelegate
@@ -109,10 +118,32 @@ final class SectionsViewController: UIViewController, UITableViewDelegate, UITab
         tableView.deleteSections(IndexSet(integer: index), with: .fade)
     }
 
+    // MARK: - UISearchResultsUpdating
+
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            dataProvider.filter(text: text)
+        } else {
+            dataProvider.cancelSearch()
+        }
+        tableView.reloadData()
+    }
+
     // MARK: - Private methods
 
     func getItem(at indexPath: IndexPath) -> Item {
         return dataProvider.item(in: indexPath.section, at: indexPath.row)
+    }
+
+    @available(iOS 11, *)
+    private func addSearch() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        navigationItem.searchController = searchController
     }
 }
 
