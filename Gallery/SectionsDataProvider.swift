@@ -22,40 +22,41 @@
  THE SOFTWARE.
  */
 
-import UIKit
+protocol SectionsDataProviderDelegate: class {
+    func didChangeRowsInside(section: Int)
+    func didReloadData()
+}
 
-public struct SectionsItem: Item {
-
-    // MARK: - Private properties
+final class SectionsDataProvider {
 
     private let sections: [Section]
 
-    // MARK: - Instantiation
+    weak var delegate: SectionsDataProviderDelegate?
 
-    public init(title: String,
-                subtitle: String? = nil,
-                image: UIImage? = nil,
-                sections: [Section]) {
-        self.title = title
-        self.image = image
-        self.subtitle = subtitle
+    init(sections: [Section]) {
         self.sections = sections
+
+        for (index, section) in sections.enumerated() {
+            section.setSectionChange { [weak self] in
+                self?.delegate?.didChangeRowsInside(section: index)
+            }
+        }
     }
 
-    // MARK: - Item
-
-    public let title: String
-    public let image: UIImage?
-    public let subtitle: String?
-
-    public var subitems: [Item] {
-        return sections.flatMap { $0.items }
+    var numberOfSections: Int {
+        return sections.count
     }
 
-    public func viewController() -> UIViewController {
-        let dataProvider = SectionsDataProvider(sections: sections)
-        let controller = SectionsViewController(dataProvider: dataProvider)
-        dataProvider.delegate = controller
-        return controller
+    func numberOfItems(in section: Int) -> Int {
+        return sections[section].items.count
     }
+
+    func title(forSection section: Int) -> String? {
+        return sections[section].title
+    }
+
+    func item(in section: Int, at index: Int) -> Item {
+        return sections[section].items[index]
+    }
+
 }

@@ -24,28 +24,28 @@
 
 import UIKit
 
-public final class SectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class SectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SectionsDataProviderDelegate {
 
     // MARK: - Private properties
 
     private var tableView: UITableView!
 
-    private let sections: [Section]
+    private let dataProvider: SectionsDataProvider
 
     // MARK: - Instantiation
 
-    public init(sections: [Section]) {
-        self.sections = sections
+    init(dataProvider: SectionsDataProvider) {
+        self.dataProvider = dataProvider
         super.init(nibName: nil, bundle: nil)
     }
 
-    public required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - UIViewController
 
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView = UITableView(frame: .zero, style: .grouped)
@@ -56,17 +56,11 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
         tableView.alignAllEdgesWithSuperview()
-
-        for (index, section) in sections.enumerated() {
-            section.setSectionChange { [weak self] in
-                self?.tableView.reloadSections(IndexSet(integer: index), with: .automatic)
-            }
-        }
     }
 
     // MARK: - UITableViewDelegate
 
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = getItem(at: indexPath)
         item.presentWithPreferredStyle(from: self)
@@ -74,30 +68,41 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
 
     // MARK: - UITableViewDataSource
 
-    public func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dataProvider.numberOfSections
     }
 
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].items.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataProvider.numberOfItems(in: section)
     }
 
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: .cell, for: indexPath) as! SectionCell
         let item = getItem(at: indexPath)
         cell.setItem(item)
         return cell
     }
 
-    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard sections.count > 1 else { return nil }
-        return sections[section].title
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return dataProvider.title(forSection: section)
+    }
+
+    // MARK: - SectionsDataProviderDelegate
+
+    func didReloadData() {
+        guard isViewLoaded else { return }
+        tableView.reloadData()
+    }
+
+    func didChangeRowsInside(section: Int) {
+        guard isViewLoaded else { return }
+        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
     }
 
     // MARK: - Private methods
 
-    private func getItem(at indexPath: IndexPath) -> Item {
-        return sections[indexPath.section].items[indexPath.row]
+    func getItem(at indexPath: IndexPath) -> Item {
+        return dataProvider.item(in: indexPath.section, at: indexPath.row)
     }
 }
 
