@@ -26,27 +26,19 @@ import UIKit
 
 public struct CustomViewControllerItem: Item {
 
-    // MARK: - Type declarations
-
-    public enum PresentationStyle {
-        case push
-        case modal
-    }
-
     // MARK: - Private properties
 
     private let viewControllerFactory: () -> UIViewController
-    private let presentationStyle: PresentationStyle
 
     // MARK: - Instantiation
 
     public init(title: String,
                 subtitle: String? = nil,
-                presentationStyle: PresentationStyle = .push,
+                presentationStyle: ItemPreferredPresentationStyle = .push,
                 viewControllerFactory: @escaping () -> UIViewController) {
         self.title = title
         self.subtitle = subtitle
-        self.presentationStyle = presentationStyle
+        self.preferredPresentationStyle = presentationStyle
         self.viewControllerFactory = viewControllerFactory
     }
 
@@ -54,17 +46,9 @@ public struct CustomViewControllerItem: Item {
 
     public let title: String
     public let subtitle: String?
+    public let preferredPresentationStyle: ItemPreferredPresentationStyle
 
-    public func present(from viewController: UIViewController) {
-        let controller = viewControllerFactory()
-        switch presentationStyle {
-        case .push:
-            guard let navigationController = viewController.navigationController else {
-                fatalError("View controller \(viewController) doesn't have navigation controller, but push presentation style is requested")
-            }
-            navigationController.pushViewController(controller, animated: true)
-        case .modal:
-            viewController.present(controller, animated: true, completion: nil)
-        }
+    public func viewController() -> UIViewController {
+        return viewControllerFactory()
     }
 }

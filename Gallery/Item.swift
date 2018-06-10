@@ -51,18 +51,27 @@ public struct ItemIdentifier: Hashable {
     }
 }
 
-public protocol Presentable {
-    func present(from viewController: UIViewController)
+public protocol ViewControllerProviding {
+    func viewController() -> UIViewController
 }
 
-public protocol Item: Presentable {
+public enum ItemPreferredPresentationStyle {
+    case present
+    case push
+}
+
+public protocol Item: ViewControllerProviding {
     var identifier: ItemIdentifier { get }
     var title: String { get }
     var subtitle: String? { get }
     var subitems: [Item] { get }
+    var preferredPresentationStyle: ItemPreferredPresentationStyle { get }
 }
 
 extension Item {
+    public var preferredPresentationStyle: ItemPreferredPresentationStyle {
+        return .push
+    }
     public var identifier: ItemIdentifier {
         return ItemIdentifier(title: title, subtitle: subtitle)
     }

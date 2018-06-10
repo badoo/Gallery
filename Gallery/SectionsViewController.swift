@@ -68,7 +68,8 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        getItem(at: indexPath).present(from: self)
+        let item = getItem(at: indexPath)
+        present(item: item)
     }
 
     // MARK: - UITableViewDataSource
@@ -94,6 +95,20 @@ public final class SectionsViewController: UIViewController, UITableViewDelegate
     }
 
     // MARK: - Private methods
+
+    private func present(item: Item) {
+        let viewController = item.viewController()
+        switch item.preferredPresentationStyle {
+        case .push:
+            guard let navigationController = navigationController else {
+                assertionFailure("SectionsViewController should be presented inside of navigation controller")
+                fallthrough
+            }
+            navigationController.pushViewController(viewController, animated: true)
+        case .present:
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
 
     private func getItem(at indexPath: IndexPath) -> Item {
         return sections[indexPath.section].items[indexPath.row]

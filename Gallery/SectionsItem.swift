@@ -47,12 +47,7 @@ public struct SectionsItem: Item {
         return sections.flatMap { $0.items }
     }
 
-    public func present(from viewController: UIViewController) {
-        guard let navigationController = viewController.navigationController else {
-            fatalError("View controller \(viewController) doesn't have navigation controller, but push presentation style is requested")
-        }
-        let sectionsController = SectionsViewController(sections: sections)
-        sectionsController.title = title
-        navigationController.pushViewController(sectionsController, animated: true)
+    public func viewController() -> UIViewController {
+        return SectionsViewController(sections: sections)
     }
 }

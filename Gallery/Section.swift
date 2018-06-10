@@ -56,8 +56,12 @@ private struct NestedItem: Item {
         return item.subitems
     }
 
-    func present(from viewController: UIViewController) {
-        item.present(from: viewController)
+    var preferredPresentationStyle: ItemPreferredPresentationStyle {
+        return item.preferredPresentationStyle
+    }
+
+    func viewController() -> UIViewController {
+        return item.viewController()
     }
 
     init(item: Item, sectionTitle: String) {

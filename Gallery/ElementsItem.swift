@@ -43,13 +43,7 @@ public struct ElementsItem: Item {
     public let title: String
     public let subtitle: String?
 
-    public func present(from viewController: UIViewController) {
-        guard let navigationController = viewController.navigationController else {
-            fatalError("View controller \(viewController) doesn't have navigation controller, but push presentation style is requested")
-        }
-        let elements = provider.elements()
-        let elementsController = ElementsViewController(elements: elements)
-        elementsController.title = title
-        navigationController.pushViewController(elementsController, animated: true)
+    public func viewController() -> UIViewController {
+        return ElementsViewController(elements: provider.elements())
     }
 }
