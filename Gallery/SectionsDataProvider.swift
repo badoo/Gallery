@@ -37,7 +37,7 @@ final class SectionsDataProvider {
         self.sections = sections
 
         for (index, section) in sections.enumerated() {
-            section.setSectionChange { [weak self] in
+            section.setSectionChange { [weak self] _, _ in
                 self?.delegate?.didChangeRowsInside(section: index)
             }
         }

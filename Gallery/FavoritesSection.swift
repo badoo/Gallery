@@ -27,7 +27,7 @@ public final class FavoritesSection: Section {
     // MARK: - Private properties
 
     private let service: Lazy<FavoritesProviding>
-    private var sectionChangeHandler = {}
+    private var sectionChangeHandler: ChangeHandler = { _, _ in }
     private var favoritesObserver: ObserverProtocol?
 
     // MARK: - Instantiation
@@ -42,11 +42,11 @@ public final class FavoritesSection: Section {
 
     public var items: [Item] = [] {
         didSet {
-            sectionChangeHandler()
+            sectionChangeHandler(oldValue.count, items.count)
         }
     }
 
-    public func setSectionChange(handler: @escaping () -> Void) {
+    public func setSectionChange(handler: @escaping ChangeHandler) {
         sectionChangeHandler = handler
         observeFavoritsChange()
     }

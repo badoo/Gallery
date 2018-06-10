@@ -23,15 +23,16 @@
  */
 
 public protocol Section {
+    typealias ChangeHandler = (_ oldCount: Int, _ newCount: Int) -> Void
     var title: String { get }
     var items: [Item] { get }
-    func setSectionChange(handler: @escaping () -> Void)
+    func setSectionChange(handler: @escaping ChangeHandler)
 }
 
 public struct StaticSection: Section {
     public let title: String
     public let items: [Item]
-    public func setSectionChange(handler: @escaping () -> Void) {}
+    public func setSectionChange(handler: @escaping ChangeHandler) {}
     public init(title: String, items: [Item]) {
         self.title = title
         self.items = items.map { NestedItem(item: $0, parentTitle: title) }
