@@ -30,7 +30,7 @@ public struct TabItem: Item {
 
     public init(title: String, items: [Item]) {
         self.title = title
-        self.subitems = items
+        self.subitems = items.map { NestedItem(item: $0, parentTitle: title) }
     }
 
     // MARK: - Item

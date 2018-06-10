@@ -22,18 +22,38 @@
  THE SOFTWARE.
  */
 
-public protocol Section {
-    var title: String { get }
-    var items: [Item] { get }
-    func setSectionChange(handler: @escaping () -> Void)
-}
+struct NestedItem: Item {
 
-public struct StaticSection: Section {
-    public let title: String
-    public let items: [Item]
-    public func setSectionChange(handler: @escaping () -> Void) {}
-    public init(title: String, items: [Item]) {
-        self.title = title
-        self.items = items.map { NestedItem(item: $0, parentTitle: title) }
+    private let item: Item
+
+    // MARK: - Instantiation
+
+    init(item: Item, parentTitle: String) {
+        self.identifier = ItemIdentifier(id: item.identifier, parentTitle: parentTitle)
+        self.item = item
+    }
+
+    // MARK: - Item
+
+    let identifier: ItemIdentifier
+
+    var title: String {
+        return item.title
+    }
+
+    var subtitle: String? {
+        return item.subtitle
+    }
+
+    var subitems: [Item] {
+        return item.subitems
+    }
+
+    var preferredPresentationStyle: ItemPreferredPresentationStyle {
+        return item.preferredPresentationStyle
+    }
+
+    func viewController() -> UIViewController {
+        return item.viewController()
     }
 }

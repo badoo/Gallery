@@ -26,7 +26,7 @@ import UIKit
 
 public struct ItemIdentifier: Hashable {
     private let itemId: String
-    private let sections: [String]
+    private let parents: [String]
 
     init(title: String, subtitle: String? = nil) {
         var id = title
@@ -34,18 +34,18 @@ public struct ItemIdentifier: Hashable {
             id += "(" + subtitle + ")"
         }
         itemId = id
-        sections = []
+        parents = []
     }
 
-    init(id: ItemIdentifier, sectionTitle: String) {
+    init(id: ItemIdentifier, parentTitle: String) {
         self.itemId = id.itemId
-        var sections = id.sections
-        sections.append(sectionTitle)
-        self.sections = sections
+        var parents = id.parents
+        parents.append(parentTitle)
+        self.parents = parents
     }
 
     public var hashValue: Int {
-        var result = sections
+        var result = parents
         result.append(itemId)
         return result.joined(separator: "/").hashValue
     }
