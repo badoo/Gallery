@@ -24,12 +24,17 @@
 
 protocol SectionsDataProviderDelegate: class {
     func didChangeRowsInside(section: Int)
+    func didInsertSection(at index: Int)
+    func didRemoveSection(at index: Int)
     func didReloadData()
 }
 
 final class SectionsDataProvider {
 
     private let sections: [Section]
+    private var nonEmptySections: [Section] {
+        return sections.filter { !$0.items.isEmpty }
+    }
 
     weak var delegate: SectionsDataProviderDelegate?
 
@@ -37,26 +42,36 @@ final class SectionsDataProvider {
         self.sections = sections
 
         for (index, section) in sections.enumerated() {
-            section.setSectionChange { [weak self] _, _ in
-                self?.delegate?.didChangeRowsInside(section: index)
+            section.setSectionChange { [weak self] oldCount, newCount in
+                guard let delegate = self?.delegate else { return }
+                switch (oldCount, newCount) {
+                case let (old, new) where old == new:
+                    delegate.didChangeRowsInside(section: index)
+                case (0, _):
+                    delegate.didInsertSection(at: index)
+                case (_, 0):
+                    delegate.didRemoveSection(at: index)
+                default:
+                    delegate.didChangeRowsInside(section: index)
+                }
             }
         }
     }
 
     var numberOfSections: Int {
-        return sections.count
+        return nonEmptySections.count
     }
 
     func numberOfItems(in section: Int) -> Int {
-        return sections[section].items.count
+        return nonEmptySections[section].items.count
     }
 
     func title(forSection section: Int) -> String? {
-        return sections[section].title
+        return nonEmptySections[section].title
     }
 
     func item(in section: Int, at index: Int) -> Item {
-        return sections[section].items[index]
+        return nonEmptySections[section].items[index]
     }
 
 }

@@ -96,7 +96,17 @@ final class SectionsViewController: UIViewController, UITableViewDelegate, UITab
 
     func didChangeRowsInside(section: Int) {
         guard isViewLoaded else { return }
-        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+        tableView.reloadSections(IndexSet(integer: section), with: .fade)
+    }
+
+    func didInsertSection(at index: Int) {
+        guard isViewLoaded else { return }
+        tableView.insertSections(IndexSet(integer: index), with: .fade)
+    }
+
+    func didRemoveSection(at index: Int) {
+        guard isViewLoaded else { return }
+        tableView.deleteSections(IndexSet(integer: index), with: .fade)
     }
 
     // MARK: - Private methods
