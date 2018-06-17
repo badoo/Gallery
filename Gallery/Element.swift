@@ -25,14 +25,27 @@
 import UIKit
 
 public struct Element {
+
+    public enum SnapshotTestState {
+        case final
+        case record
+        case disabled
+    }
+
     let title: String
     let view: UIView
+    let snapshotTestState: SnapshotTestState
     let width: CGFloat?
     let height: CGFloat?
 
-    public init(title: String, view: UIView, width: CGFloat? = nil, height: CGFloat? = nil) {
+    public init(title: String,
+                view: UIView,
+                snapshotTestState: SnapshotTestState,
+                width: CGFloat? = nil,
+                height: CGFloat? = nil) {
         self.title = title
         self.view = view
+        self.snapshotTestState = snapshotTestState
         self.width = width
         self.height = height
     }
