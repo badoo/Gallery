@@ -33,7 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let allElementsSectionItem = SectionsItem(title: "All Elements", sections: [])
+        let squareViewElements = ElementsItem(title: "Square Views", provider: SquareViewElementProvider())
+        let simpleViewsSection = StaticSection(title: "Simple views", items: [squareViewElements])
+        let allElementsSectionItem = SectionsItem(title: "All Elements", sections: [simpleViewsSection])
         let favoriteSectionItem = SectionsItem(title: "Favorites", sections: [FavoritesSection()])
         let rootItem = TabItem(title: "Gallery Example", items: [allElementsSectionItem, favoriteSectionItem])
         let store = ItemStore(rootItem: rootItem)
