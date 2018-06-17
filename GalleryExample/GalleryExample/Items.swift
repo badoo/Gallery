@@ -22,19 +22,18 @@
  THE SOFTWARE.
  */
 
-import UIKit
 import Gallery
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        ItemsLoader().loadItems()
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = RootViewControllerFactory().makeRootViewController()
-        window!.makeKeyAndVisible()
-        return true
+@objc
+public final class ItemsLoader: NSObject {
+    @objc
+    public func loadItems() {
+        let squareViewElements = ElementsItem(title: "Square Views", provider: SquareViewElementProvider())
+        let simpleViewsSection = StaticSection(title: "Simple views", items: [squareViewElements])
+        let allElementsSectionItem = SectionsItem(title: "All Elements", sections: [simpleViewsSection])
+        let favoriteSectionItem = SectionsItem(title: "Favorites", sections: [FavoritesSection()])
+        let rootItem = TabItem(title: "Gallery Example", items: [allElementsSectionItem, favoriteSectionItem])
+        let store = ItemStore(rootItem: rootItem)
+        Globals.setup(itemStore: store)
     }
 }

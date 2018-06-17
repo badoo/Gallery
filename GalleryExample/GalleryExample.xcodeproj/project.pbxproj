@@ -15,6 +15,7 @@
 		2675121220D6DC600022C73C /* Gallery.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2675121020D6DC600022C73C /* Gallery.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2675121520D6DFF50022C73C /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2675121420D6DFF50022C73C /* SquareView.swift */; };
 		2675121720D6E0AC0022C73C /* SquareViewElementProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2675121620D6E0AC0022C73C /* SquareViewElementProvider.swift */; };
+		2675121D20D6E2AE0022C73C /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2675121C20D6E2AE0022C73C /* Items.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2675121020D6DC600022C73C /* Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2675121420D6DFF50022C73C /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		2675121620D6E0AC0022C73C /* SquareViewElementProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewElementProvider.swift; sourceTree = "<group>"; };
+		2675121C20D6E2AE0022C73C /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				267511DC20D6DAC50022C73C /* AppDelegate.swift */,
 				2675121420D6DFF50022C73C /* SquareView.swift */,
+				2675121C20D6E2AE0022C73C /* Items.swift */,
 				2675121620D6E0AC0022C73C /* SquareViewElementProvider.swift */,
 				267511E320D6DAC70022C73C /* Assets.xcassets */,
 				267511E520D6DAC70022C73C /* LaunchScreen.storyboard */,
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2675121D20D6E2AE0022C73C /* Items.swift in Sources */,
 				2675121720D6E0AC0022C73C /* SquareViewElementProvider.swift in Sources */,
 				267511DD20D6DAC50022C73C /* AppDelegate.swift in Sources */,
 				2675121520D6DFF50022C73C /* SquareView.swift in Sources */,
