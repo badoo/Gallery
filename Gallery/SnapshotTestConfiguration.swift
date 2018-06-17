@@ -117,3 +117,9 @@ public struct SnapshotTestsConfiguration {
         return sel_registerName(name.cString(using: .utf8)!)
     }
 }
+
+extension SnapshotTestsConfiguration {
+    public func setup(itemStore: ItemStore) {
+        self.setup(providers: itemStore.allElementProviders)
+    }
+}
