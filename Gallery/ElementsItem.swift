@@ -43,6 +43,10 @@ public struct ElementsItem: Item {
     public let title: String
     public let subtitle: String?
 
+    public var elementsProvider: ElemenetsProviding? {
+        return provider
+    }
+
     public func viewController() -> UIViewController {
         return ElementsViewController(elements: provider.elements())
     }

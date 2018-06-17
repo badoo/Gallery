@@ -25,17 +25,26 @@
 public struct ItemStore {
     let rootItem: Item
     let allItems: [ItemIdentifier: Item]
+    let allElementProviders: [ElemenetsProviding]
 
     public init(rootItem: Item) {
         self.rootItem = rootItem
         var dict: [ItemIdentifier: Item] = [:]
         let flatten = rootItem.subitems.flattenItems()
+        var elementProviders: [ElemenetsProviding] = []
+        if let provider = rootItem.elementsProvider {
+            elementProviders.append(provider)
+        }
         for item in flatten {
+            if let provider = item.elementsProvider {
+                elementProviders.append(provider)
+            }
             let id = item.identifier
             assert(dict[id] == nil, "Found items with same identifiers")
             dict[id] = item
         }
         self.allItems = dict
+        self.allElementProviders = elementProviders
     }
 }
 
