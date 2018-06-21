@@ -66,6 +66,11 @@ final class SectionCell: UITableViewCell {
         }
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        detailTextLabel!.text = nil
+    }
+
     @objc
     private func didTapFavoritesButton() {
         guard let id = itemId else { return }
