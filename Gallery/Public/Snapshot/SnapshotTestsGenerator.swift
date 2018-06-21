@@ -24,7 +24,7 @@
 
 import UIKit
 
-public struct SnapshotTestsConfiguration {
+public struct SnapshotTestsGenerator {
 
     // MARK: - Type declarations
 
@@ -42,7 +42,7 @@ public struct SnapshotTestsConfiguration {
 
     // MARK: - Public API
 
-    public func setup(providers: [ElementsProviding]) {
+    public func generateTests(forProviders providers: [ElementsProviding]) {
         for provider in providers {
             self.setup(provider: provider)
         }
@@ -113,8 +113,8 @@ public struct SnapshotTestsConfiguration {
     }
 }
 
-extension SnapshotTestsConfiguration {
-    public func setup(itemStore: ItemStore) {
-        self.setup(providers: itemStore.allElementProviders)
+extension SnapshotTestsGenerator {
+    public func generateTests(forItemStore itemStore: ItemStore) {
+        self.generateTests(forProviders: itemStore.allElementProviders)
     }
 }
