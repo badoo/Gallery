@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3620CC5A4E009C3E34 /* Globals.swift */; };
 		2670FD3920CC5B04009C3E34 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3820CC5B04009C3E34 /* ItemStore.swift */; };
-		2670FD3B20CD64D1009C3E34 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3A20CD64D1009C3E34 /* Observer.swift */; };
+		2670FD3B20CD64D1009C3E34 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3A20CD64D1009C3E34 /* Observable.swift */; };
 		2670FD3D20CD6876009C3E34 /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3C20CD6876009C3E34 /* FavoritesService.swift */; };
 		2670FD3F20CD7257009C3E34 /* FavoritesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3E20CD7257009C3E34 /* FavoritesSection.swift */; };
 		2670FD4120CD765C009C3E34 /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD4020CD765C009C3E34 /* RootViewControllerFactory.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		2670FD3620CC5A4E009C3E34 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		2670FD3820CC5B04009C3E34 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
-		2670FD3A20CD64D1009C3E34 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		2670FD3A20CD64D1009C3E34 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		2670FD3C20CD6876009C3E34 /* FavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
 		2670FD3E20CD7257009C3E34 /* FavoritesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSection.swift; sourceTree = "<group>"; };
 		2670FD4020CD765C009C3E34 /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 				26ACD3E320C2D01F00B3B5B3 /* Info.plist */,
 				2670FD3620CC5A4E009C3E34 /* Globals.swift */,
 				2670FD4020CD765C009C3E34 /* RootViewControllerFactory.swift */,
-				2670FD3A20CD64D1009C3E34 /* Observer.swift */,
+				2670FD3A20CD64D1009C3E34 /* Observable.swift */,
 				2670FD3820CC5B04009C3E34 /* ItemStore.swift */,
 				2670FD3C20CD6876009C3E34 /* FavoritesService.swift */,
 				26ACD41520C455F300B3B5B3 /* SectionCell.swift */,
@@ -226,7 +226,7 @@
 				2670FD3F20CD7257009C3E34 /* FavoritesSection.swift in Sources */,
 				2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */,
 				2670FD3920CC5B04009C3E34 /* ItemStore.swift in Sources */,
-				2670FD3B20CD64D1009C3E34 /* Observer.swift in Sources */,
+				2670FD3B20CD64D1009C3E34 /* Observable.swift in Sources */,
 				26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */,
 				26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */,
 				26ACD3EF20C2E1A400B3B5B3 /* Item.swift in Sources */,
