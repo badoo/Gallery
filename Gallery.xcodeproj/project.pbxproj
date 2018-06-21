@@ -45,6 +45,7 @@
 		26FFB08720DC33A500E460A3 /* ElementsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08620DC33A500E460A3 /* ElementsCollectionViewLayout.swift */; };
 		26FFB08920DC359100E460A3 /* SnapshotTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08820DC359100E460A3 /* SnapshotTestState.swift */; };
 		26FFB09520DC470600E460A3 /* GlobalsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */; };
+		26FFB09720DC4CBC00E460A3 /* FavoritesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB09620DC4CBC00E460A3 /* FavoritesStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		26FFB08620DC33A500E460A3 /* ElementsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsCollectionViewLayout.swift; sourceTree = "<group>"; };
 		26FFB08820DC359100E460A3 /* SnapshotTestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestState.swift; sourceTree = "<group>"; };
 		26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalsConfiguration.swift; sourceTree = "<group>"; };
+		26FFB09620DC4CBC00E460A3 /* FavoritesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 				2670FD3C20CD6876009C3E34 /* FavoritesService.swift */,
 				26FFB08020DC32B700E460A3 /* FavoritesServiceProtocol.swift */,
 				26FFB08220DC32D900E460A3 /* FavoritesProviding.swift */,
+				26FFB09620DC4CBC00E460A3 /* FavoritesStorage.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */,
 				26FFB07820DC307500E460A3 /* ViewControllerProviding.swift in Sources */,
 				26FFB08320DC32D900E460A3 /* FavoritesProviding.swift in Sources */,
+				26FFB09720DC4CBC00E460A3 /* FavoritesStorage.swift in Sources */,
 				2670FD3920CC5B04009C3E34 /* ItemStore.swift in Sources */,
 				26FFB08920DC359100E460A3 /* SnapshotTestState.swift in Sources */,
 				2670FD3B20CD64D1009C3E34 /* Observable.swift in Sources */,

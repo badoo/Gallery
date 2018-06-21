@@ -21,12 +21,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-extension Globals {
-    public static func setup(itemStore: ItemStore) {
-        let favoritesStorage = FavoritesStorage(userDefaults: .standard)
-        let favoritesService = FavoritesService(store: itemStore, storage: favoritesStorage)
-        _shared = Globals(itemStore: itemStore,
-                          favoritesService: favoritesService,
-                          favoritesProvider: favoritesService)
+import Foundation
+
+protocol FavoritesStorageProtocol {
+    func save(favorites: [ItemIdentifier])
+    func load() -> [ItemIdentifier]?
+}
+
+struct FavoritesStorage: FavoritesStorageProtocol {
+
+    private let userDefaults: UserDefaults
+
+    private static let key = "gallery.favorited-items"
+
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+    }
+
+    func save(favorites: [ItemIdentifier]) {
+        let encoder = PropertyListEncoder()
+        guard let data = try? encoder.encode(favorites) else { return }
+        userDefaults.set(data, forKey: FavoritesStorage.key)
+    }
+
+    func load() -> [ItemIdentifier]? {
+        guard let data = userDefaults.data(forKey: FavoritesStorage.key) else { return nil }
+        let decoder = PropertyListDecoder()
+        guard let ids = try? decoder.decode([ItemIdentifier].self, from: data) else { return nil }
+        return ids
     }
 }

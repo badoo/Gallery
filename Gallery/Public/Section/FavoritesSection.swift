@@ -54,6 +54,7 @@ public final class FavoritesSection: Section {
     // MARK: - Private methods
 
     private func observeFavoritsChange() {
+        self.items = service.value.allFavoritesItems.value
         favoritesObserver = service.value.allFavoritesItems.observe { [weak self] items in
             self?.items = items
         }

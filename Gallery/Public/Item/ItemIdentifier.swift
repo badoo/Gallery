@@ -22,9 +22,10 @@
  THE SOFTWARE.
  */
 
-public struct ItemIdentifier: Hashable {
+public struct ItemIdentifier: Hashable, Codable {
     private let itemId: String
     private let parents: [String]
+    public private(set) var hashValue: Int
 
     init(title: String, subtitle: String? = nil) {
         var id = title
@@ -43,8 +44,6 @@ public struct ItemIdentifier: Hashable {
         self.parents = parents
         hashValue = ItemIdentifier.hash(id: id.itemId, parents: parents)
     }
-
-    public private(set) var hashValue: Int
 
     private static func hash(id: String, parents: [String]) -> Int {
         var result = 29

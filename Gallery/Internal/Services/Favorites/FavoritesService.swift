@@ -27,14 +27,22 @@ final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
     // MARK: - Private properties
 
     private let store: ItemStore
-    private var favorited: Set<ItemIdentifier>
+    private let storage: FavoritesStorageProtocol
+    private var favorited: Set<ItemIdentifier> {
+        didSet {
+            storage.save(favorites: Array(favorited))
+        }
+    }
     private var favoritesStateObserver: [ItemIdentifier: Observable<Bool>] = [:]
 
     // MARK: - Instantiation
 
-    init(store: ItemStore) {
+    init(store: ItemStore, storage: FavoritesStorageProtocol) {
         self.store = store
-        self.favorited = []
+        self.storage = storage
+        let allIds = store.allItems.keys
+        self.favorited = storage.load().map(Set.init)?.intersection(allIds) ?? []
+        self.allFavoritesItems = .init(favorited.compactMap { store.allItems[$0] })
     }
 
     // MARK: - FavoritesServiceProtocol
@@ -69,7 +77,7 @@ final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
 
     // MARK: - FavoritesProviding
 
-    private(set) var allFavoritesItems: Observable<[Item]> = .init([])
+    let allFavoritesItems: Observable<[Item]>
 
     // MARK: - Private methods
 
