@@ -39,6 +39,8 @@
 		26FFB07A20DC30B400E460A3 /* Item+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB07920DC30B400E460A3 /* Item+Presentation.swift */; };
 		26FFB07C20DC311200E460A3 /* PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB07B20DC311200E460A3 /* PresentationStyle.swift */; };
 		26FFB07E20DC315A00E460A3 /* Item+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB07D20DC315A00E460A3 /* Item+Default.swift */; };
+		26FFB08120DC32B700E460A3 /* FavoritesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08020DC32B700E460A3 /* FavoritesServiceProtocol.swift */; };
+		26FFB08320DC32D900E460A3 /* FavoritesProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08220DC32D900E460A3 /* FavoritesProviding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		26FFB07920DC30B400E460A3 /* Item+Presentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Presentation.swift"; sourceTree = "<group>"; };
 		26FFB07B20DC311200E460A3 /* PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationStyle.swift; sourceTree = "<group>"; };
 		26FFB07D20DC315A00E460A3 /* Item+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Default.swift"; sourceTree = "<group>"; };
+		26FFB08020DC32B700E460A3 /* FavoritesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesServiceProtocol.swift; sourceTree = "<group>"; };
+		26FFB08220DC32D900E460A3 /* FavoritesProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProviding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +244,7 @@
 		26FFB06C20DC285D00E460A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2670FD3C20CD6876009C3E34 /* FavoritesService.swift */,
+				26FFB07F20DC32AB00E460A3 /* Favorites */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,6 +267,16 @@
 				26ACD3F020C2E34C00B3B5B3 /* CustomViewControllerItem.swift */,
 			);
 			path = "Item Implementations";
+			sourceTree = "<group>";
+		};
+		26FFB07F20DC32AB00E460A3 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2670FD3C20CD6876009C3E34 /* FavoritesService.swift */,
+				26FFB08020DC32B700E460A3 /* FavoritesServiceProtocol.swift */,
+				26FFB08220DC32D900E460A3 /* FavoritesProviding.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +371,7 @@
 				26ACD3FD20C30CDA00B3B5B3 /* Element.swift in Sources */,
 				26FFB07C20DC311200E460A3 /* PresentationStyle.swift in Sources */,
 				267511CB20D6BB9A0022C73C /* SnapshotTestConfiguration.swift in Sources */,
+				26FFB08120DC32B700E460A3 /* FavoritesServiceProtocol.swift in Sources */,
 				26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */,
 				2670FD4320CD959E009C3E34 /* TabItem.swift in Sources */,
 				2670FD4720CD9BCA009C3E34 /* NestedItem.swift in Sources */,
@@ -368,6 +383,7 @@
 				2670FD3F20CD7257009C3E34 /* FavoritesSection.swift in Sources */,
 				2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */,
 				26FFB07820DC307500E460A3 /* ViewControllerProviding.swift in Sources */,
+				26FFB08320DC32D900E460A3 /* FavoritesProviding.swift in Sources */,
 				2670FD3920CC5B04009C3E34 /* ItemStore.swift in Sources */,
 				2670FD3B20CD64D1009C3E34 /* Observable.swift in Sources */,
 				26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */,

@@ -22,27 +22,6 @@
  THE SOFTWARE.
  */
 
-protocol FavoritesServiceProtocol {
-    func isFavorite(id: ItemIdentifier) -> Bool
-    func addToFavorites(id: ItemIdentifier)
-    func removeFromFavorites(id: ItemIdentifier)
-    func observeIsFavorite(id: ItemIdentifier) -> Observable<Bool>
-}
-
-extension FavoritesServiceProtocol {
-    func toggleFavorites(id: ItemIdentifier) {
-        if isFavorite(id: id) {
-            removeFromFavorites(id: id)
-        } else {
-            addToFavorites(id: id)
-        }
-    }
-}
-
-protocol FavoritesProviding {
-    var allFavoritesItems: Observable<[Item]> { get }
-}
-
 final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
 
     // MARK: - Private properties
