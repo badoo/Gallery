@@ -63,7 +63,7 @@ private final class ObserverWrapper<T>: Equatable {
     }
 }
 
-final class Disposable: ObserverProtocol {
+private final class Disposable: ObserverProtocol {
 
     private let onDeinit: () -> Void
 
