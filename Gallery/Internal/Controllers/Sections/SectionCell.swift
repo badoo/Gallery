@@ -36,17 +36,15 @@ final class SectionCell: UITableViewCell {
         favoritesButton = UIButton()
         super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
 
-        favoritesButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 25)
-        favoritesButton.setTitleColor(.black, for: .normal)
         favoritesButton.addTarget(self, action: #selector(didTapFavoritesButton), for: .touchUpInside)
 
         favoritesButton.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(favoritesButton)
         NSLayoutConstraint.activate([
-            favoritesButton.widthAnchor.constraint(equalToConstant: 24),
-            favoritesButton.heightAnchor.constraint(equalToConstant: 24),
+            favoritesButton.widthAnchor.constraint(equalToConstant: 40),
+            favoritesButton.heightAnchor.constraint(equalTo: favoritesButton.widthAnchor),
             favoritesButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            favoritesButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -14)
+            favoritesButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -4)
         ])
         setIsFavorite(false)
     }
@@ -75,6 +73,9 @@ final class SectionCell: UITableViewCell {
     }
 
     private func setIsFavorite(_ isFavorite: Bool) {
-        favoritesButton.setTitle(isFavorite ? "★" : "☆", for: .normal)
+        let name = isFavorite ? "gallery.favorite.on" : "gallery.favorite.off"
+        let bundle = Bundle(for: SectionCell.self)
+        let image = UIImage(named: name, in: bundle, compatibleWith: nil)
+        favoritesButton.setImage(image, for: .normal)
     }
 }
