@@ -22,6 +22,12 @@
  THE SOFTWARE.
  */
 
-public protocol ElementsProviding: TestCaseNameProviding {
-    func elements() -> [Element]
+public protocol TestCaseNameProviding {
+    var testCaseName: String { get }
+}
+
+extension TestCaseNameProviding {
+    public var testCaseName: String {
+        return String(describing: Self.self)
+    }
 }

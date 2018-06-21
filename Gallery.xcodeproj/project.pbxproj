@@ -32,6 +32,7 @@
 		26ACD41620C455F300B3B5B3 /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD41520C455F300B3B5B3 /* SectionCell.swift */; };
 		26FFB06020DC244000E460A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FFB05F20DC244000E460A3 /* Assets.xcassets */; };
 		26FFB06F20DC2A0600E460A3 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */; };
+		26FFB07120DC2A9E00E460A3 /* TestCaseNameProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB07020DC2A9E00E460A3 /* TestCaseNameProviding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		26ACD41520C455F300B3B5B3 /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
 		26FFB05F20DC244000E460A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
+		26FFB07020DC2A9E00E460A3 /* TestCaseNameProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaseNameProviding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */,
+				26FFB07020DC2A9E00E460A3 /* TestCaseNameProviding.swift */,
 				267511CA20D6BB9A0022C73C /* SnapshotTestConfiguration.swift */,
 			);
 			path = Snapshot;
@@ -329,6 +332,7 @@
 				26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */,
 				2670FD4320CD959E009C3E34 /* TabItem.swift in Sources */,
 				2670FD4720CD9BCA009C3E34 /* NestedItem.swift in Sources */,
+				26FFB07120DC2A9E00E460A3 /* TestCaseNameProviding.swift in Sources */,
 				26ACD3FF20C30D9500B3B5B3 /* ElementsProviding.swift in Sources */,
 				26ACD40320C317C000B3B5B3 /* ElementsViewController.swift in Sources */,
 				2670FD3F20CD7257009C3E34 /* FavoritesSection.swift in Sources */,
