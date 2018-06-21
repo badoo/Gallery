@@ -22,8 +22,13 @@
  THE SOFTWARE.
  */
 
-public struct Globals {
-    private static var _shared: Globals?
+public final class Globals {
+    static var _shared: Globals? {
+        willSet {
+            guard _shared == nil else { return }
+        }
+    }
+
     static var shared: Globals {
         guard let globals = _shared else {
             fatalError("Please setup globals before use")
@@ -35,10 +40,9 @@ public struct Globals {
     let favoritesService: FavoritesServiceProtocol
     let favoritesProvider: FavoritesProviding
 
-    public static func setup(itemStore: ItemStore) {
-        let favoritesService = FavoritesService(store: itemStore)
-        _shared = Globals(itemStore: itemStore,
-                          favoritesService: favoritesService,
-                          favoritesProvider: favoritesService)
+    init(itemStore: ItemStore, favoritesService: FavoritesServiceProtocol, favoritesProvider: FavoritesProviding) {
+        self.itemStore = itemStore
+        self.favoritesService = favoritesService
+        self.favoritesProvider = favoritesProvider
     }
 }

@@ -44,6 +44,7 @@
 		26FFB08520DC334F00E460A3 /* ElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08420DC334F00E460A3 /* ElementCollectionViewCell.swift */; };
 		26FFB08720DC33A500E460A3 /* ElementsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08620DC33A500E460A3 /* ElementsCollectionViewLayout.swift */; };
 		26FFB08920DC359100E460A3 /* SnapshotTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08820DC359100E460A3 /* SnapshotTestState.swift */; };
+		26FFB09520DC470600E460A3 /* GlobalsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		26FFB08420DC334F00E460A3 /* ElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCollectionViewCell.swift; sourceTree = "<group>"; };
 		26FFB08620DC33A500E460A3 /* ElementsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsCollectionViewLayout.swift; sourceTree = "<group>"; };
 		26FFB08820DC359100E460A3 /* SnapshotTestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestState.swift; sourceTree = "<group>"; };
+		26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalsConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,9 +215,9 @@
 		26FFB06820DC26DA00E460A3 /* Entry Point */ = {
 			isa = PBXGroup;
 			children = (
-				2670FD3620CC5A4E009C3E34 /* Globals.swift */,
 				2670FD3820CC5B04009C3E34 /* ItemStore.swift */,
 				2670FD4020CD765C009C3E34 /* RootViewControllerFactory.swift */,
+				26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */,
 			);
 			path = "Entry Point";
 			sourceTree = "<group>";
@@ -253,6 +255,7 @@
 		26FFB06C20DC285D00E460A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2670FD3620CC5A4E009C3E34 /* Globals.swift */,
 				26FFB07F20DC32AB00E460A3 /* Favorites */,
 			);
 			path = Services;
@@ -373,6 +376,7 @@
 				26FFB07320DC2B4000E460A3 /* StaticSection.swift in Sources */,
 				2670FD4120CD765C009C3E34 /* RootViewControllerFactory.swift in Sources */,
 				26ACD3F120C2E34C00B3B5B3 /* ViewControllerItem.swift in Sources */,
+				26FFB09520DC470600E460A3 /* GlobalsConfiguration.swift in Sources */,
 				26ACD40120C30E2500B3B5B3 /* ElementsItem.swift in Sources */,
 				2670FD4B20CDBAC7009C3E34 /* SectionsDataProvider.swift in Sources */,
 				26ACD41620C455F300B3B5B3 /* SectionCell.swift in Sources */,
