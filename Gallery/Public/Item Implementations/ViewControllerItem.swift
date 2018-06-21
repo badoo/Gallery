@@ -24,7 +24,7 @@
 
 import UIKit
 
-public struct CustomViewControllerItem: Item {
+public struct ViewControllerItem: Item {
 
     // MARK: - Private properties
 
