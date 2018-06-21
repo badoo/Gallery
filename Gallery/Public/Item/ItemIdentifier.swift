@@ -33,6 +33,7 @@ public struct ItemIdentifier: Hashable {
         }
         itemId = id
         parents = []
+        hashValue = ItemIdentifier.hash(id: id, parents: parents)
     }
 
     init(id: ItemIdentifier, parentTitle: String) {
@@ -40,11 +41,17 @@ public struct ItemIdentifier: Hashable {
         var parents = id.parents
         parents.append(parentTitle)
         self.parents = parents
+        hashValue = ItemIdentifier.hash(id: id.itemId, parents: parents)
     }
 
-    public var hashValue: Int {
-        var result = parents
-        result.append(itemId)
-        return result.joined(separator: "/").hashValue
+    public private(set) var hashValue: Int
+
+    private static func hash(id: String, parents: [String]) -> Int {
+        var result = 29
+        result = 37 &* result &+ id.hashValue
+        for parent in parents {
+            result = 37 &* result &+ parent.hashValue
+        }
+        return result
     }
 }
