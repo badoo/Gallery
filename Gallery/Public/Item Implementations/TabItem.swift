@@ -37,7 +37,7 @@ public struct TabItem: Item {
 
     public let title: String
     public let subtitle: String? = nil
-    public let preferredPresentationStyle: ItemPreferredPresentationStyle = .present
+    public let preferredPresentationStyle: PresentationStyle = .present
     public let subitems: [Item]
 
     public func viewController() -> UIViewController {

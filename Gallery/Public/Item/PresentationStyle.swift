@@ -22,7 +22,7 @@
  THE SOFTWARE.
  */
 
-public enum ItemPreferredPresentationStyle {
+public enum PresentationStyle {
     case present
     case push
 }

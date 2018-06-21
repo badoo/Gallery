@@ -31,5 +31,5 @@ public protocol Item: ViewControllerProviding {
     var subitems: [Item] { get }
     var elementsProvider: ElementsProviding? { get }
     var image: UIImage? { get }
-    var preferredPresentationStyle: ItemPreferredPresentationStyle { get }
+    var preferredPresentationStyle: PresentationStyle { get }
 }

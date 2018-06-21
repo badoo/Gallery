@@ -57,7 +57,7 @@ struct NestedItem: Item {
         return item.elementsProvider
     }
 
-    var preferredPresentationStyle: ItemPreferredPresentationStyle {
+    var preferredPresentationStyle: PresentationStyle {
         return item.preferredPresentationStyle
     }
 

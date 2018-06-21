@@ -25,7 +25,7 @@
 import UIKit
 
 extension Item {
-    public var preferredPresentationStyle: ItemPreferredPresentationStyle {
+    public var preferredPresentationStyle: PresentationStyle {
         return .push
     }
     public var identifier: ItemIdentifier {

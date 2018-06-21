@@ -35,7 +35,7 @@ public struct CustomViewControllerItem: Item {
     public init(title: String,
                 subtitle: String? = nil,
                 image: UIImage? = nil,
-                presentationStyle: ItemPreferredPresentationStyle = .push,
+                presentationStyle: PresentationStyle = .push,
                 viewControllerFactory: @escaping () -> UIViewController) {
         self.title = title
         self.image = image
@@ -49,7 +49,7 @@ public struct CustomViewControllerItem: Item {
     public let title: String
     public let image: UIImage?
     public let subtitle: String?
-    public let preferredPresentationStyle: ItemPreferredPresentationStyle
+    public let preferredPresentationStyle: PresentationStyle
 
     public func viewController() -> UIViewController {
         return viewControllerFactory()
