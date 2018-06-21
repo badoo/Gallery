@@ -31,6 +31,7 @@
 		26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD40520C31F2300B3B5B3 /* UIView+Autolayout.swift */; };
 		26ACD41620C455F300B3B5B3 /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ACD41520C455F300B3B5B3 /* SectionCell.swift */; };
 		26FFB06020DC244000E460A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FFB05F20DC244000E460A3 /* Assets.xcassets */; };
+		26FFB06F20DC2A0600E460A3 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		26ACD40520C31F2300B3B5B3 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		26ACD41520C455F300B3B5B3 /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
 		26FFB05F20DC244000E460A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		26FFB06B20DC281100E460A3 /* Snapshot */ = {
 			isa = PBXGroup;
 			children = (
+				26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */,
 				267511CA20D6BB9A0022C73C /* SnapshotTestConfiguration.swift */,
 			);
 			path = Snapshot;
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26FFB06F20DC2A0600E460A3 /* SnapshotTestCase.swift in Sources */,
 				2670FD3D20CD6876009C3E34 /* FavoritesService.swift in Sources */,
 				2670FD4120CD765C009C3E34 /* RootViewControllerFactory.swift in Sources */,
 				26ACD3F120C2E34C00B3B5B3 /* CustomViewControllerItem.swift in Sources */,

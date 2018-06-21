@@ -24,11 +24,6 @@
 
 import UIKit
 
-public protocol SnapshotTestCase: NSObjectProtocol {
-    var recordMode: Bool { get set }
-    func verify(view: UIView)
-}
-
 public struct SnapshotTestsConfiguration {
 
     // MARK: - Type declarations
