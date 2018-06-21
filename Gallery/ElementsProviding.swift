@@ -26,7 +26,7 @@ public protocol TestCaseNameProviding {
     var testCaseName: String { get }
 }
 
-public protocol ElemenetsProviding: TestCaseNameProviding {
+public protocol ElementsProviding: TestCaseNameProviding {
     func elements() -> [Element]
 }
 

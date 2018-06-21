@@ -25,13 +25,13 @@
 public struct ItemStore {
     let rootItem: Item
     let allItems: [ItemIdentifier: Item]
-    let allElementProviders: [ElemenetsProviding]
+    let allElementProviders: [ElementsProviding]
 
     public init(rootItem: Item) {
         self.rootItem = rootItem
         var dict: [ItemIdentifier: Item] = [:]
         let flatten = rootItem.subitems.flattenItems()
-        var elementProviders: [ElemenetsProviding] = []
+        var elementProviders: [ElementsProviding] = []
         if let provider = rootItem.elementsProvider {
             elementProviders.append(provider)
         }

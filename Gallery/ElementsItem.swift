@@ -28,11 +28,11 @@ public struct ElementsItem: Item {
 
     // MARK: - Private properties
 
-    private let provider: ElemenetsProviding
+    private let provider: ElementsProviding
 
     // MARK: - Instantiation
 
-    public init(title: String, subtitle: String? = nil, provider: ElemenetsProviding) {
+    public init(title: String, subtitle: String? = nil, provider: ElementsProviding) {
         self.title = title
         self.subtitle = subtitle
         self.provider = provider
@@ -43,7 +43,7 @@ public struct ElementsItem: Item {
     public let title: String
     public let subtitle: String?
 
-    public var elementsProvider: ElemenetsProviding? {
+    public var elementsProvider: ElementsProviding? {
         return provider
     }
 

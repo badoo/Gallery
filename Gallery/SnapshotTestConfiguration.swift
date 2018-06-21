@@ -47,7 +47,7 @@ public struct SnapshotTestsConfiguration {
 
     // MARK: - Public API
 
-    public func setup(providers: [ElemenetsProviding]) {
+    public func setup(providers: [ElementsProviding]) {
         for provider in providers {
             self.setup(provider: provider)
         }
@@ -55,7 +55,7 @@ public struct SnapshotTestsConfiguration {
 
     // MARK: - Private methods
 
-    private func setup(provider: ElemenetsProviding) {
+    private func setup(provider: ElementsProviding) {
         let testCaseName = provider.testCaseName.cString(using: .utf8)!
         let testCaseClass: AnyClass = objc_allocateClassPair(self.type, testCaseName, 0)!
         for element in provider.elements() where element.snapshotTestState != .disabled {

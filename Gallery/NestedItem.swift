@@ -53,7 +53,7 @@ struct NestedItem: Item {
         return item.image
     }
 
-    var elementsProvider: ElemenetsProviding? {
+    var elementsProvider: ElementsProviding? {
         return item.elementsProvider
     }
 
