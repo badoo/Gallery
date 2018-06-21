@@ -94,29 +94,8 @@
 			children = (
 				26ACD3E220C2D01F00B3B5B3 /* Gallery.h */,
 				26ACD3E320C2D01F00B3B5B3 /* Info.plist */,
-				2670FD3620CC5A4E009C3E34 /* Globals.swift */,
-				2670FD4020CD765C009C3E34 /* RootViewControllerFactory.swift */,
-				2670FD3A20CD64D1009C3E34 /* Observable.swift */,
-				2670FD3820CC5B04009C3E34 /* ItemStore.swift */,
-				2670FD3C20CD6876009C3E34 /* FavoritesService.swift */,
-				26ACD41520C455F300B3B5B3 /* SectionCell.swift */,
-				2670FD3E20CD7257009C3E34 /* FavoritesSection.swift */,
-				26ACD3EA20C2D99F00B3B5B3 /* SectionsViewController.swift */,
-				2670FD4A20CDBAC7009C3E34 /* SectionsDataProvider.swift */,
-				26ACD3EC20C2E19D00B3B5B3 /* Section.swift */,
-				2670FD4620CD9BCA009C3E34 /* NestedItem.swift */,
-				26ACD3EE20C2E1A400B3B5B3 /* Item.swift */,
-				26ACD3F020C2E34C00B3B5B3 /* CustomViewControllerItem.swift */,
-				26ACD3F820C3084A00B3B5B3 /* SectionsItem.swift */,
-				2670FD4220CD959E009C3E34 /* TabItem.swift */,
-				2670FD4420CD96D1009C3E34 /* TabViewController.swift */,
-				26ACD3FC20C30CDA00B3B5B3 /* Element.swift */,
-				26ACD3FE20C30D9500B3B5B3 /* ElementsProviding.swift */,
-				26ACD40020C30E2500B3B5B3 /* ElementsItem.swift */,
-				26ACD40220C317C000B3B5B3 /* ElementsViewController.swift */,
-				267511CA20D6BB9A0022C73C /* SnapshotTestConfiguration.swift */,
-				26FFB05F20DC244000E460A3 /* Assets.xcassets */,
-				26ACD40420C31F0F00B3B5B3 /* Utilities */,
+				26FFB06220DC265200E460A3 /* Public */,
+				26FFB06120DC264500E460A3 /* Internal */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -124,9 +103,134 @@
 		26ACD40420C31F0F00B3B5B3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2670FD3A20CD64D1009C3E34 /* Observable.swift */,
 				26ACD40520C31F2300B3B5B3 /* UIView+Autolayout.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		26FFB06120DC264500E460A3 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				26FFB05F20DC244000E460A3 /* Assets.xcassets */,
+				26FFB06D20DC289000E460A3 /* Items */,
+				26FFB06C20DC285D00E460A3 /* Services */,
+				26FFB06420DC269F00E460A3 /* Controllers */,
+				26ACD40420C31F0F00B3B5B3 /* Utilities */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		26FFB06220DC265200E460A3 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				26FFB06B20DC281100E460A3 /* Snapshot */,
+				26FFB06A20DC27F300E460A3 /* Element */,
+				26FFB06920DC270600E460A3 /* Section */,
+				26FFB06820DC26DA00E460A3 /* Entry Point */,
+				26FFB06320DC269300E460A3 /* Items */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		26FFB06320DC269300E460A3 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				26ACD3EE20C2E1A400B3B5B3 /* Item.swift */,
+				26ACD3F820C3084A00B3B5B3 /* SectionsItem.swift */,
+				2670FD4220CD959E009C3E34 /* TabItem.swift */,
+				26ACD40020C30E2500B3B5B3 /* ElementsItem.swift */,
+				26ACD3F020C2E34C00B3B5B3 /* CustomViewControllerItem.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		26FFB06420DC269F00E460A3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				26FFB06720DC26B300E460A3 /* Elements */,
+				26FFB06620DC26AF00E460A3 /* Tab */,
+				26FFB06520DC26A800E460A3 /* Sections */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		26FFB06520DC26A800E460A3 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				26ACD41520C455F300B3B5B3 /* SectionCell.swift */,
+				26ACD3EA20C2D99F00B3B5B3 /* SectionsViewController.swift */,
+				2670FD4A20CDBAC7009C3E34 /* SectionsDataProvider.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		26FFB06620DC26AF00E460A3 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				2670FD4420CD96D1009C3E34 /* TabViewController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		26FFB06720DC26B300E460A3 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				26ACD40220C317C000B3B5B3 /* ElementsViewController.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		26FFB06820DC26DA00E460A3 /* Entry Point */ = {
+			isa = PBXGroup;
+			children = (
+				2670FD3620CC5A4E009C3E34 /* Globals.swift */,
+				2670FD3820CC5B04009C3E34 /* ItemStore.swift */,
+				2670FD4020CD765C009C3E34 /* RootViewControllerFactory.swift */,
+			);
+			path = "Entry Point";
+			sourceTree = "<group>";
+		};
+		26FFB06920DC270600E460A3 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				26ACD3EC20C2E19D00B3B5B3 /* Section.swift */,
+				2670FD3E20CD7257009C3E34 /* FavoritesSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		26FFB06A20DC27F300E460A3 /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				26ACD3FC20C30CDA00B3B5B3 /* Element.swift */,
+				26ACD3FE20C30D9500B3B5B3 /* ElementsProviding.swift */,
+			);
+			path = Element;
+			sourceTree = "<group>";
+		};
+		26FFB06B20DC281100E460A3 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				267511CA20D6BB9A0022C73C /* SnapshotTestConfiguration.swift */,
+			);
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
+		26FFB06C20DC285D00E460A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2670FD3C20CD6876009C3E34 /* FavoritesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		26FFB06D20DC289000E460A3 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				2670FD4620CD9BCA009C3E34 /* NestedItem.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
