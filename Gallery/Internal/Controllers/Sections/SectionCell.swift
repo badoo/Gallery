@@ -34,7 +34,7 @@ final class SectionCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         favoritesButton = UIButton()
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
 
         favoritesButton.titleLabel!.font = UIFont.boldSystemFont(ofSize: 25)
         favoritesButton.setTitleColor(.black, for: .normal)
