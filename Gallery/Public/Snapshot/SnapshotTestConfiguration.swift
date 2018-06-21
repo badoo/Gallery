@@ -53,7 +53,7 @@ public struct SnapshotTestsConfiguration {
     private func setup(provider: ElementsProviding) {
         let testCaseName = provider.testCaseName.cString(using: .utf8)!
         let testCaseClass: AnyClass = objc_allocateClassPair(self.type, testCaseName, 0)!
-        for element in provider.elements() where element.snapshotTestState != .disabled {
+        for element in provider.elements() where element.testState != .disabled {
             addTestMethod(forClass: testCaseClass, element: element)
         }
         objc_registerClassPair(testCaseClass)
@@ -72,7 +72,7 @@ public struct SnapshotTestsConfiguration {
             guard let testCase = _self as? SnapshotTestCase else { fatalError() }
 
             let recordMode: Bool
-            switch element.snapshotTestState {
+            switch element.testState {
             case .final:
                 recordMode = false
             case .record:

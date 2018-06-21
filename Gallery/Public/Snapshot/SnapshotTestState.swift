@@ -22,24 +22,10 @@
  THE SOFTWARE.
  */
 
-import UIKit
-
-public struct Element {
-    let title: String
-    let view: UIView
-    let testState: SnapshotTestState
-    let width: CGFloat?
-    let height: CGFloat?
-
-    public init(title: String,
-                view: UIView,
-                testState: SnapshotTestState,
-                width: CGFloat? = nil,
-                height: CGFloat? = nil) {
-        self.title = title
-        self.view = view
-        self.testState = testState
-        self.width = width
-        self.height = height
+extension Element {
+    public enum SnapshotTestState {
+        case final
+        case record
+        case disabled
     }
 }

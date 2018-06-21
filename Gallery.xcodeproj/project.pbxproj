@@ -43,6 +43,7 @@
 		26FFB08320DC32D900E460A3 /* FavoritesProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08220DC32D900E460A3 /* FavoritesProviding.swift */; };
 		26FFB08520DC334F00E460A3 /* ElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08420DC334F00E460A3 /* ElementCollectionViewCell.swift */; };
 		26FFB08720DC33A500E460A3 /* ElementsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08620DC33A500E460A3 /* ElementsCollectionViewLayout.swift */; };
+		26FFB08920DC359100E460A3 /* SnapshotTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08820DC359100E460A3 /* SnapshotTestState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		26FFB08220DC32D900E460A3 /* FavoritesProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProviding.swift; sourceTree = "<group>"; };
 		26FFB08420DC334F00E460A3 /* ElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCollectionViewCell.swift; sourceTree = "<group>"; };
 		26FFB08620DC33A500E460A3 /* ElementsCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsCollectionViewLayout.swift; sourceTree = "<group>"; };
+		26FFB08820DC359100E460A3 /* SnapshotTestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 				26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */,
 				26FFB07020DC2A9E00E460A3 /* TestCaseNameProviding.swift */,
 				267511CA20D6BB9A0022C73C /* SnapshotTestConfiguration.swift */,
+				26FFB08820DC359100E460A3 /* SnapshotTestState.swift */,
 			);
 			path = Snapshot;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				26FFB07820DC307500E460A3 /* ViewControllerProviding.swift in Sources */,
 				26FFB08320DC32D900E460A3 /* FavoritesProviding.swift in Sources */,
 				2670FD3920CC5B04009C3E34 /* ItemStore.swift in Sources */,
+				26FFB08920DC359100E460A3 /* SnapshotTestState.swift in Sources */,
 				2670FD3B20CD64D1009C3E34 /* Observable.swift in Sources */,
 				26ACD40620C31F2300B3B5B3 /* UIView+Autolayout.swift in Sources */,
 				26ACD3ED20C2E19D00B3B5B3 /* Section.swift in Sources */,
