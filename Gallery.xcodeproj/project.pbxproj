@@ -33,6 +33,7 @@
 		26FFB06020DC244000E460A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FFB05F20DC244000E460A3 /* Assets.xcassets */; };
 		26FFB06F20DC2A0600E460A3 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */; };
 		26FFB07120DC2A9E00E460A3 /* TestCaseNameProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB07020DC2A9E00E460A3 /* TestCaseNameProviding.swift */; };
+		26FFB07320DC2B4000E460A3 /* StaticSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB07220DC2B4000E460A3 /* StaticSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		26FFB05F20DC244000E460A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26FFB06E20DC2A0600E460A3 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
 		26FFB07020DC2A9E00E460A3 /* TestCaseNameProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCaseNameProviding.swift; sourceTree = "<group>"; };
+		26FFB07220DC2B4000E460A3 /* StaticSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				26ACD3EC20C2E19D00B3B5B3 /* Section.swift */,
+				26FFB07220DC2B4000E460A3 /* StaticSection.swift */,
 				2670FD3E20CD7257009C3E34 /* FavoritesSection.swift */,
 			);
 			path = Section;
@@ -321,6 +324,7 @@
 			files = (
 				26FFB06F20DC2A0600E460A3 /* SnapshotTestCase.swift in Sources */,
 				2670FD3D20CD6876009C3E34 /* FavoritesService.swift in Sources */,
+				26FFB07320DC2B4000E460A3 /* StaticSection.swift in Sources */,
 				2670FD4120CD765C009C3E34 /* RootViewControllerFactory.swift in Sources */,
 				26ACD3F120C2E34C00B3B5B3 /* CustomViewControllerItem.swift in Sources */,
 				26ACD40120C30E2500B3B5B3 /* ElementsItem.swift in Sources */,
