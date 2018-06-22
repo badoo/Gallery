@@ -28,9 +28,9 @@ final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
 
     private let store: ItemStore
     private let storage: FavoritesStorageProtocol
-    private var favorited: Set<ItemIdentifier> {
+    private var favorites: Set<ItemIdentifier> {
         didSet {
-            storage.save(favorites: Array(favorited))
+            storage.save(favorites: Array(favorites))
         }
     }
     private var favoritesStateObserver: [ItemIdentifier: Observable<Bool>] = [:]
@@ -41,25 +41,25 @@ final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
         self.store = store
         self.storage = storage
         let allIds = store.allItems.keys
-        self.favorited = storage.load().map(Set.init)?.intersection(allIds) ?? []
-        self.allFavoritesItems = .init(favorited.compactMap { store.allItems[$0] })
+        self.favorites = storage.load().map(Set.init)?.intersection(allIds) ?? []
+        self.allFavoritesItems = .init(favorites.compactMap { store.allItems[$0] })
     }
 
     // MARK: - FavoritesServiceProtocol
 
     func isFavorite(id: ItemIdentifier) -> Bool {
-        return favorited.contains(id)
+        return favorites.contains(id)
     }
 
     func addToFavorites(id: ItemIdentifier) {
-        let (didInsert, _) = favorited.insert(id)
+        let (didInsert, _) = favorites.insert(id)
         if didInsert {
             notifyChange(id: id)
         }
     }
 
     func removeFromFavorites(id: ItemIdentifier) {
-        let item = favorited.remove(id)
+        let item = favorites.remove(id)
         if item != nil {
             notifyChange(id: id)
         }
@@ -87,7 +87,7 @@ final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
     }
 
     private func notifyAllFavoritesChange() {
-        let items = favorited.compactMap { store.allItems[$0] }
+        let items = favorites.compactMap { store.allItems[$0] }
         allFavoritesItems.setValue(items)
     }
 }
