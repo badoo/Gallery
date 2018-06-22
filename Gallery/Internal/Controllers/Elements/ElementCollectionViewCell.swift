@@ -69,7 +69,7 @@ final class ElementCollectionViewCell: UICollectionViewCell {
 
     // MARK: - API
 
-    func setElement(_ element: Element) {
+    func setElement(_ element: Element, defaultWidth: CGFloat) {
         titleLabel.text = element.title
 
         let view = element.view
@@ -80,6 +80,10 @@ final class ElementCollectionViewCell: UICollectionViewCell {
 
         if let width = element.width {
             constraints.append(view.widthAnchor.constraint(equalToConstant: width))
+        } else {
+            let defaultWidthConstraint = view.widthAnchor.constraint(equalToConstant: defaultWidth)
+            defaultWidthConstraint.priority = .defaultLow
+            constraints.append(defaultWidthConstraint)
         }
 
         if let height = element.height {

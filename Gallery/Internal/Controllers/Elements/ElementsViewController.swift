@@ -65,7 +65,7 @@ final class ElementsViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: .cell, for: indexPath) as! ElementCollectionViewCell
         let element = elements[indexPath.row]
-        cell.setElement(element)
+        cell.setElement(element, defaultWidth: collectionView.bounds.width)
         return cell
     }
 }
