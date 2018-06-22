@@ -1,0 +1,93 @@
+/*
+ The MIT License (MIT)
+
+ Copyright (c) 2018-present Badoo Trading Limited.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ */
+
+final class FavoritesService: FavoritesServiceProtocol, FavoritesProviding {
+
+    // MARK: - Private properties
+
+    private let store: ItemStore
+    private let storage: FavoritesStorageProtocol
+    private var favorites: Set<ItemIdentifier> {
+        didSet {
+            storage.save(favorites: Array(favorites))
+        }
+    }
+    private var favoritesStateObserver: [ItemIdentifier: Observable<Bool>] = [:]
+
+    // MARK: - Instantiation
+
+    init(store: ItemStore, storage: FavoritesStorageProtocol) {
+        self.store = store
+        self.storage = storage
+        let allIds = store.allItems.keys
+        self.favorites = storage.load().map(Set.init)?.intersection(allIds) ?? []
+        self.allFavoritesItems = .init(favorites.compactMap { store.allItems[$0] })
+    }
+
+    // MARK: - FavoritesServiceProtocol
+
+    func isFavorite(id: ItemIdentifier) -> Bool {
+        return favorites.contains(id)
+    }
+
+    func addToFavorites(id: ItemIdentifier) {
+        let (didInsert, _) = favorites.insert(id)
+        if didInsert {
+            notifyChange(id: id)
+        }
+    }
+
+    func removeFromFavorites(id: ItemIdentifier) {
+        let item = favorites.remove(id)
+        if item != nil {
+            notifyChange(id: id)
+        }
+    }
+
+    func observeIsFavorite(id: ItemIdentifier) -> Observable<Bool> {
+        if let observer = favoritesStateObserver[id] {
+            return observer
+        }
+        let state = isFavorite(id: id)
+        let observable = Observable(state)
+        favoritesStateObserver[id] = observable
+        return observable
+    }
+
+    // MARK: - FavoritesProviding
+
+    let allFavoritesItems: Observable<[Item]>
+
+    // MARK: - Private methods
+
+    private func notifyChange(id: ItemIdentifier) {
+        favoritesStateObserver[id]?.setValue(isFavorite(id: id))
+        notifyAllFavoritesChange()
+    }
+
+    private func notifyAllFavoritesChange() {
+        let items = favorites.compactMap { store.allItems[$0] }
+        allFavoritesItems.setValue(items)
+    }
+}
