@@ -91,16 +91,18 @@ private final class SearchSection: Section {
 
     // MARK: - SearchSection
 
-    private var searchText: String?
+    private var searchText: String? {
+        didSet {
+            updateFilteredItems()
+        }
+    }
 
     func filter(text: String) {
         searchText = text
-        updateFilteredItems()
     }
 
     func cancelSearch() {
         searchText = nil
-        updateFilteredItems()
     }
 
     // MARK: - Section
