@@ -30,7 +30,7 @@ extension Item {
         switch preferredPresentationStyle {
         case .push:
             guard let navigationController = viewController.navigationController else {
-                assertionFailure()
+                assertionFailure("Trying to present with .push presentation style with no UINavigationController")
                 fallthrough
             }
             navigationController.pushViewController(controller, animated: true)
