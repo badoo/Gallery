@@ -53,6 +53,8 @@ final class SectionsViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.rowHeight = 44
+        tableView.estimatedRowHeight = 0
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(SectionCell.self, forCellReuseIdentifier: .cell)
