@@ -56,19 +56,12 @@ final class SectionCell: UITableViewCell {
     func setItem(_ item: Item) {
         itemId = item.identifier
         textLabel!.text = item.title
-        if let subtitle = item.subtitle {
-            detailTextLabel!.text = subtitle
-        }
+        detailTextLabel!.text = item.subtitle
         let observable = favoritesService.observeIsFavorite(id: itemId!)
         setIsFavorite(observable.value)
         favoritesObserver = observable.observe { [weak self] isFavorite in
             self?.setIsFavorite(isFavorite)
         }
-    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        detailTextLabel!.text = nil
     }
 
     @objc
