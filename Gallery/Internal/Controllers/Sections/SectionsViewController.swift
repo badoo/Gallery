@@ -33,7 +33,7 @@ final class SectionsViewController: UIViewController,
 
     // MARK: - Private properties
 
-    private var tableView: UITableView!
+    private var tableView = UITableView(frame: .zero, style: .grouped)
 
     private let dataProvider: SectionsDataProvider
 
@@ -53,7 +53,6 @@ final class SectionsViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView = UITableView(frame: .zero, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(SectionCell.self, forCellReuseIdentifier: .cell)

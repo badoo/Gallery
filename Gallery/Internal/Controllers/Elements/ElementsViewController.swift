@@ -28,7 +28,8 @@ final class ElementsViewController: UIViewController, UICollectionViewDataSource
 
     // MARK: - Private properties
 
-    private var collectionView: UICollectionView!
+    private let collectionView = UICollectionView(frame: .zero,
+                                                  collectionViewLayout: .makeElementsFlowLayout())
 
     private let elements: [Element]
 
@@ -46,8 +47,6 @@ final class ElementsViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView = UICollectionView(frame: .zero,
-                                          collectionViewLayout: .makeElementsFlowLayout())
         collectionView.register(ElementCollectionViewCell.self, forCellWithReuseIdentifier: .cell)
         collectionView.backgroundColor = UIColor(white: 0.96, alpha: 1)
         collectionView.dataSource = self
