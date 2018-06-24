@@ -70,6 +70,8 @@ final class ElementCollectionViewCell: UICollectionViewCell {
     // MARK: - API
 
     func setElement(_ element: Element, maxWidth: CGFloat) {
+        container.backgroundColor = element.backgroundColor
+
         titleLabel.text = element.title
 
         let view = element.view

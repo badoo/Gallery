@@ -29,17 +29,20 @@ public struct Element {
     let title: String
     let view: UIView
     let testState: SnapshotTestState
+    let backgroundColor: UIColor
     let width: Dimension
     let height: Dimension
 
     public init(title: String,
                 view: UIView,
                 testState: SnapshotTestState,
+                backgroundColor: UIColor = .clear,
                 width: Dimension = .default,
                 height: Dimension = .default) {
         self.title = title
         self.view = view
         self.testState = testState
+        self.backgroundColor = backgroundColor
         self.width = width
         self.height = height
     }
