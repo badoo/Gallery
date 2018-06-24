@@ -34,7 +34,7 @@ final class ElementCollectionViewCell: UICollectionViewCell {
     // MARK: - Instantiation
 
     override init(frame: CGRect) {
-        titleLabel = UILabel()
+        titleLabel = ElementCollectionViewCell.makeTitleLabel()
         container = UIView()
         super.init(frame: .zero)
 
@@ -95,5 +95,15 @@ final class ElementCollectionViewCell: UICollectionViewCell {
         }
         constraints.forEach { $0.priority = .defaultHigh }
         NSLayoutConstraint.activate(constraints)
+    }
+
+    // MARK: - Factories
+
+    private static func makeTitleLabel() -> UILabel {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
+        return label
     }
 }
