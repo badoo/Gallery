@@ -99,11 +99,8 @@ public struct SnapshotTestsGenerator {
                 break
             }
 
-            switch element.height {
-            case .custom(let height):
+            if let height = element.height {
                 view.heightAnchor.constraint(equalToConstant: height).isActive = true
-            case .selfSizing, .default:
-                break
             }
 
             view.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true

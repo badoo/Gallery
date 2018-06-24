@@ -89,11 +89,8 @@ final class ElementCollectionViewCell: UICollectionViewCell {
             constraints.append(view.widthAnchor.constraint(equalToConstant: maxWidth))
         }
 
-        switch element.height {
-        case .custom(let height):
+        if let height = element.height {
             constraints.append(view.heightAnchor.constraint(equalToConstant: height))
-        case .selfSizing, .default:
-            break
         }
         constraints.forEach { $0.priority = .defaultHigh }
         NSLayoutConstraint.activate(constraints)

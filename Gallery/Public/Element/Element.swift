@@ -30,15 +30,15 @@ public struct Element {
     let view: UIView
     let testState: SnapshotTestState
     let backgroundColor: UIColor
-    let width: Dimension
-    let height: Dimension
+    let width: Width
+    let height: CGFloat?
 
     public init(title: String,
                 view: UIView,
                 testState: SnapshotTestState,
                 backgroundColor: UIColor = .clear,
-                width: Dimension = .default,
-                height: Dimension = .default) {
+                width: Width = .default,
+                height: CGFloat? = nil) {
         self.title = title
         self.view = view
         self.testState = testState
@@ -49,7 +49,7 @@ public struct Element {
 }
 
 extension Element {
-    public enum Dimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
+    public enum Width: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
         case custom(CGFloat)
         case selfSizing
         case `default`
