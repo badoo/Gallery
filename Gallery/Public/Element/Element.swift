@@ -25,21 +25,38 @@
 import UIKit
 
 public struct Element {
+
     let title: String
     let view: UIView
     let testState: SnapshotTestState
-    let width: CGFloat?
-    let height: CGFloat?
+    let width: Dimension
+    let height: Dimension
 
     public init(title: String,
                 view: UIView,
                 testState: SnapshotTestState,
-                width: CGFloat? = nil,
-                height: CGFloat? = nil) {
+                width: Dimension = .default,
+                height: Dimension = .default) {
         self.title = title
         self.view = view
         self.testState = testState
         self.width = width
         self.height = height
+    }
+}
+
+extension Element {
+    public enum Dimension: ExpressibleByFloatLiteral, ExpressibleByIntegerLiteral {
+        case custom(CGFloat)
+        case selfSizing
+        case `default`
+
+        public init(floatLiteral value: CGFloat.NativeType) {
+            self = .custom(CGFloat(value))
+        }
+
+        public init(integerLiteral value: Int) {
+            self.init(floatLiteral: CGFloat.NativeType(value))
+        }
     }
 }

@@ -88,12 +88,21 @@ public struct SnapshotTestsGenerator {
             let view = element.view
             view.translatesAutoresizingMaskIntoConstraints = false
             container.addSubview(view)
-            if let width = element.width {
+
+            switch element.width {
+            case .custom(let width):
                 view.widthAnchor.constraint(equalToConstant: width).isActive = true
+            case .selfSizing, .default:
+                break
             }
-            if let height = element.height {
+
+            switch element.height {
+            case .custom(let height):
                 view.heightAnchor.constraint(equalToConstant: height).isActive = true
+            case .selfSizing, .default:
+                break
             }
+
             testCase.verify(view: view)
         }
     }

@@ -78,16 +78,22 @@ final class ElementCollectionViewCell: UICollectionViewCell {
 
         var constraints = view.constraintsForAligningAllEdgesWithSuperview()
 
-        if let width = element.width {
+        switch element.width {
+        case .custom(let width):
             constraints.append(view.widthAnchor.constraint(equalToConstant: width))
-        } else {
+        case .selfSizing:
             constraints.append(view.widthAnchor.constraint(lessThanOrEqualToConstant: maxWidth))
+        case .default:
+            constraints.append(view.widthAnchor.constraint(equalToConstant: maxWidth))
         }
 
-        if let height = element.height {
+        switch element.height {
+        case .custom(let height):
             constraints.append(view.heightAnchor.constraint(equalToConstant: height))
+        case .selfSizing, .default:
+            break
         }
-
+        constraints.forEach { $0.priority = .defaultHigh }
         NSLayoutConstraint.activate(constraints)
     }
 }
