@@ -33,6 +33,7 @@ public struct SnapshotTestsGenerator {
     // MARK: - Private properties
 
     private let type: SnapshotTestCase.Type
+    private static let defaultWidth: CGFloat = 375
 
     // MARK: - Instantiation
 
@@ -92,7 +93,9 @@ public struct SnapshotTestsGenerator {
             switch element.width {
             case .custom(let width):
                 view.widthAnchor.constraint(equalToConstant: width).isActive = true
-            case .selfSizing, .default:
+            case .default:
+                view.widthAnchor.constraint(equalToConstant: SnapshotTestsGenerator.defaultWidth).isActive = true
+            case .selfSizing:
                 break
             }
 
