@@ -103,6 +103,9 @@ public struct SnapshotTestsGenerator {
                 break
             }
 
+            view.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
+            view.centerYAnchor.constraint(equalTo: container.centerYAnchor).isActive = true
+
             testCase.verify(view: view)
         }
     }
