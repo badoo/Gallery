@@ -94,6 +94,7 @@ final class ElementCollectionViewCell: UICollectionViewCell {
         }
         constraints.forEach { $0.priority = .defaultHigh }
         NSLayoutConstraint.activate(constraints)
+        container.layoutIfNeeded()
     }
 
     // MARK: - Factories
