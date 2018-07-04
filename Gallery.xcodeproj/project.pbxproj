@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265F01A720ED00BC00A21387 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265F01A620ED00BC00A21387 /* ArrayExtensions.swift */; };
 		2670FD3720CC5A4E009C3E34 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3620CC5A4E009C3E34 /* Globals.swift */; };
 		2670FD3920CC5B04009C3E34 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3820CC5B04009C3E34 /* ItemStore.swift */; };
 		2670FD3B20CD64D1009C3E34 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2670FD3A20CD64D1009C3E34 /* Observable.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265F01A620ED00BC00A21387 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		2670FD3620CC5A4E009C3E34 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		2670FD3820CC5B04009C3E34 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		2670FD3A20CD64D1009C3E34 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		265F01A520ED00AF00A21387 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				265F01A620ED00BC00A21387 /* ArrayExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		26ACD3D520C2D01F00B3B5B3 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		26FFB06220DC265200E460A3 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				265F01A520ED00AF00A21387 /* Extensions */,
 				26FFB06B20DC281100E460A3 /* Snapshot */,
 				26FFB06A20DC27F300E460A3 /* Element */,
 				26FFB06920DC270600E460A3 /* Section */,
@@ -395,6 +406,7 @@
 				26FFB07120DC2A9E00E460A3 /* TestCaseNameProviding.swift in Sources */,
 				26ACD3FF20C30D9500B3B5B3 /* ElementsProviding.swift in Sources */,
 				26FFB07A20DC30B400E460A3 /* Item+Presentation.swift in Sources */,
+				265F01A720ED00BC00A21387 /* ArrayExtensions.swift in Sources */,
 				26ACD40320C317C000B3B5B3 /* ElementsViewController.swift in Sources */,
 				26FFB08720DC33A500E460A3 /* UICollectionViewLayout+ElementsFlowLayout.swift in Sources */,
 				26FFB07620DC304300E460A3 /* ItemIdentifier.swift in Sources */,
