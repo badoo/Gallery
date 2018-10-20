@@ -25,7 +25,6 @@
 public struct ItemIdentifier: Hashable, Codable {
     private let itemId: String
     private let parents: [String]
-    public private(set) var hashValue: Int
 
     init(title: String, subtitle: String? = nil) {
         var id = title
@@ -34,7 +33,6 @@ public struct ItemIdentifier: Hashable, Codable {
         }
         itemId = id
         parents = []
-        hashValue = ItemIdentifier.hash(id: id, parents: parents)
     }
 
     init(id: ItemIdentifier, parentTitle: String) {
@@ -42,15 +40,5 @@ public struct ItemIdentifier: Hashable, Codable {
         var parents = id.parents
         parents.append(parentTitle)
         self.parents = parents
-        hashValue = ItemIdentifier.hash(id: id.itemId, parents: parents)
-    }
-
-    private static func hash(id: String, parents: [String]) -> Int {
-        var result = 29
-        result = 37 &* result &+ id.hashValue
-        for parent in parents {
-            result = 37 &* result &+ parent.hashValue
-        }
-        return result
     }
 }
