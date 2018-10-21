@@ -28,13 +28,12 @@ final class ElementsViewController: UIViewController, UICollectionViewDataSource
 
     // MARK: - Private properties
 
-    private let collectionView = UICollectionView(frame: .zero,
-                                                  collectionViewLayout: .makeElementsFlowLayout())
-
+    private let collectionView: UICollectionView
     private let elements: [Element]
 
-    init(elements: [Element]) {
+    init(elements: [Element], layout: UICollectionViewLayout) {
         self.elements = elements
+        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         super.init(nibName: nil, bundle: nil)
     }
 

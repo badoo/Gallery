@@ -29,11 +29,16 @@ public struct ElementsItem: Item {
     // MARK: - Private properties
 
     private let provider: ElementsProviding
+    private let insets: UIEdgeInsets
 
     // MARK: - Instantiation
 
-    public init(title: String, subtitle: String? = nil, provider: ElementsProviding) {
+    public init(title: String,
+                subtitle: String? = nil,
+                insets: UIEdgeInsets = .init(top: 15, left: 0, bottom: 0, right: 15),
+                provider: ElementsProviding) {
         self.title = title
+        self.insets = insets
         self.subtitle = subtitle
         self.provider = provider
     }
@@ -48,6 +53,7 @@ public struct ElementsItem: Item {
     }
 
     public func viewController() -> UIViewController {
-        return ElementsViewController(elements: provider.elements())
+        return ElementsViewController(elements: provider.elements(),
+                                      layout: .makeElementsFlowLayout(insets: insets))
     }
 }
