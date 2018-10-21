@@ -39,6 +39,7 @@ final class ElementCollectionViewCell: UICollectionViewCell {
         super.init(frame: .zero)
 
         titleLabel.textAlignment = .center
+        titleLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
 
         for view in [titleLabel, container] {
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -46,8 +47,8 @@ final class ElementCollectionViewCell: UICollectionViewCell {
         }
 
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             container.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             container.leadingAnchor.constraint(equalTo: leadingAnchor),
