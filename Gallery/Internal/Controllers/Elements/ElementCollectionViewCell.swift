@@ -79,7 +79,12 @@ final class ElementCollectionViewCell: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
 
-        var constraints = view.constraintsForAligningAllEdgesWithSuperview()
+        var constraints = [
+            view.centerXAnchor.constraint(equalTo: container.centerXAnchor),
+            view.topAnchor.constraint(equalTo: container.topAnchor),
+            view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
+            view.widthAnchor.constraint(lessThanOrEqualTo: container.widthAnchor)
+        ]
 
         switch element.width {
         case .custom(let width):
