@@ -35,7 +35,7 @@ public struct ElementsItem: Item {
 
     public init(title: String,
                 subtitle: String? = nil,
-                insets: UIEdgeInsets = .init(top: 15, left: 0, bottom: 0, right: 15),
+                insets: UIEdgeInsets = .init(top: 15, left: 0, bottom: 15, right: 0),
                 provider: ElementsProviding) {
         self.title = title
         self.insets = insets
