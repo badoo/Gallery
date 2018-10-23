@@ -85,6 +85,7 @@ final class ElementCollectionViewCell: UICollectionViewCell {
             view.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             view.widthAnchor.constraint(lessThanOrEqualTo: container.widthAnchor)
         ]
+        constraints.forEach { $0.priority = .defaultHigh }
 
         switch element.width {
         case .custom(let width):
@@ -98,7 +99,7 @@ final class ElementCollectionViewCell: UICollectionViewCell {
         if let height = element.height {
             constraints.append(view.heightAnchor.constraint(equalToConstant: height))
         }
-        constraints.forEach { $0.priority = .defaultHigh }
+     
         NSLayoutConstraint.activate(constraints)
         container.layoutIfNeeded()
     }
