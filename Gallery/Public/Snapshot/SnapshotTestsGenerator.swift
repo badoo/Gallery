@@ -25,27 +25,32 @@
 import UIKit
 
 public struct SnapshotTestsGenerator {
-    
+
     // MARK: - Type declarations
+
     private typealias TestImplementation = @convention(block) (Any, Selector) -> Void
-    
+
     // MARK: - Private properties
+
     private let type: SnapshotTestCase.Type
     private static let defaultWidth: CGFloat = 375
-    
+
     // MARK: - Instantiation
+
     public init(type: SnapshotTestCase.Type) {
         self.type = type
     }
-    
+
     // MARK: - Public API
+
     public func generateTests(forProviders providers: [ElementsProviding]) {
         for provider in providers {
             self.setup(provider: provider)
         }
     }
-    
+
     // MARK: - Private methods
+
     private func setup(provider: ElementsProviding) {
         let testCaseName = provider.testCaseName.cString(using: .utf8)!
         let testCaseClass: AnyClass = objc_allocateClassPair(self.type, testCaseName, 0)!
@@ -54,7 +59,7 @@ public struct SnapshotTestsGenerator {
         }
         objc_registerClassPair(testCaseClass)
     }
-    
+
     private func addTestMethod(forClass class: AnyClass, element: Element) {
         let types = typeEncodingForTestMethod()
         let implementationBlock = makeTestImplementation(forElement: element)
@@ -62,11 +67,11 @@ public struct SnapshotTestsGenerator {
         let selector = registeredSelector(forElement: element)
         class_addMethod(`class`, selector, implementation, types)
     }
-    
+
     private func makeTestImplementation(forElement element: Element) -> TestImplementation {
         return { _self, _cmd in
             guard let testCase = _self as? SnapshotTestCase else { fatalError() }
-            
+
             let recordMode: Bool
             switch element.snapshot.state {
             case .final:
@@ -77,7 +82,7 @@ public struct SnapshotTestsGenerator {
                 assertionFailure()
                 return
             }
-            
+
             testCase.recordMode = recordMode
             let container = element.snapshot.containerType.init()
             let view = element.view
@@ -92,17 +97,17 @@ public struct SnapshotTestsGenerator {
             case .selfSizing:
                 break
             }
-            
+
             if let height = element.height {
                 view.heightAnchor.constraint(equalToConstant: height).isActive = true
             }
-            
+
             view.sizeToFit()
-            
+
             testCase.verify(view: view)
         }
     }
-    
+
     private func typeEncodingForTestMethod() -> UnsafePointer<CChar> {
         @objc class TestCaseTemplate: NSObject {
             @objc func testMethodTemplate() {}
@@ -111,7 +116,7 @@ public struct SnapshotTestsGenerator {
         let method = class_getInstanceMethod(TestCaseTemplate.self, selectorTemplate)!
         return method_getTypeEncoding(method)!
     }
-    
+
     private func registeredSelector(forElement element: Element) -> Selector {
         let name = "test_" + element.title.replacingOccurrences(of: " ", with: "_")
         return sel_registerName(name.cString(using: .utf8)!)

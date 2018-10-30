@@ -25,7 +25,7 @@
 import UIKit
 
 public struct Element {
-    
+
     let title: String
     let view: UIView
     
@@ -73,11 +73,11 @@ extension Element {
         case custom(CGFloat)
         case selfSizing
         case `default`
-        
+
         public init(floatLiteral value: CGFloat.NativeType) {
             self = .custom(CGFloat(value))
         }
-        
+
         public init(integerLiteral value: Int) {
             self.init(floatLiteral: CGFloat.NativeType(value))
         }

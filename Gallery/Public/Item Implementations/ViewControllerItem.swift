@@ -25,11 +25,13 @@
 import UIKit
 
 public struct ViewControllerItem: Item {
-    
+
     // MARK: - Private properties
+
     private let viewControllerFactory: () -> UIViewController
-    
+
     // MARK: - Instantiation
+
     public init(title: String,
                 subtitle: String? = nil,
                 image: UIImage? = nil,
