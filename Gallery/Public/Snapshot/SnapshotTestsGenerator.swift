@@ -88,7 +88,7 @@ public struct SnapshotTestsGenerator {
             let view = element.view
             view.translatesAutoresizingMaskIntoConstraints = false
             container.addSubview(view)
-            
+
             switch element.width {
             case .custom(let width):
                 view.widthAnchor.constraint(equalToConstant: width).isActive = true

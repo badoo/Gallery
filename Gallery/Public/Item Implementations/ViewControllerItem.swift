@@ -51,14 +51,14 @@ public struct ViewControllerItem: Item {
             self.elementsProvider = nil
         }
     }
-    
+
     // MARK: - Item
     public let title: String
     public let image: UIImage?
     public let subtitle: String?
     public let elementsProvider: ElementsProviding?
     public let preferredPresentationStyle: PresentationStyle
-    
+
     public func viewController() -> UIViewController {
         return viewControllerFactory()
     }
