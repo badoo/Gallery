@@ -47,6 +47,7 @@
 		26FFB08920DC359100E460A3 /* SnapshotTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB08820DC359100E460A3 /* SnapshotTestState.swift */; };
 		26FFB09520DC470600E460A3 /* GlobalsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */; };
 		26FFB09720DC4CBC00E460A3 /* FavoritesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FFB09620DC4CBC00E460A3 /* FavoritesStorage.swift */; };
+		323EAECB218B562C002946D8 /* VCSnapshotItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323EAECA218B562B002946D8 /* VCSnapshotItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		26FFB08820DC359100E460A3 /* SnapshotTestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestState.swift; sourceTree = "<group>"; };
 		26FFB09420DC470600E460A3 /* GlobalsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalsConfiguration.swift; sourceTree = "<group>"; };
 		26FFB09620DC4CBC00E460A3 /* FavoritesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStorage.swift; sourceTree = "<group>"; };
+		323EAECA218B562B002946D8 /* VCSnapshotItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSnapshotItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				2670FD4220CD959E009C3E34 /* TabItem.swift */,
 				26ACD40020C30E2500B3B5B3 /* ElementsItem.swift */,
 				26ACD3F020C2E34C00B3B5B3 /* ViewControllerItem.swift */,
+				323EAECA218B562B002946D8 /* VCSnapshotItem.swift */,
 			);
 			path = "Item Implementations";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				26ACD3FD20C30CDA00B3B5B3 /* Element.swift in Sources */,
 				26FFB07C20DC311200E460A3 /* PresentationStyle.swift in Sources */,
 				267511CB20D6BB9A0022C73C /* SnapshotTestsGenerator.swift in Sources */,
+				323EAECB218B562C002946D8 /* VCSnapshotItem.swift in Sources */,
 				26FFB08120DC32B700E460A3 /* FavoritesServiceProtocol.swift in Sources */,
 				26FFB08520DC334F00E460A3 /* ElementCollectionViewCell.swift in Sources */,
 				26ACD3EB20C2D99F00B3B5B3 /* SectionsViewController.swift in Sources */,
