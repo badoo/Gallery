@@ -54,7 +54,7 @@ public struct SnapshotTestsGenerator {
     private func setup(provider: ElementsProviding) {
         let testCaseName = provider.testCaseName.cString(using: .utf8)!
         let testCaseClass: AnyClass = objc_allocateClassPair(self.type, testCaseName, 0)!
-        for element in provider.elements() where element.testState != .disabled {
+        for element in provider.elements() where element.snapshot.state != .disabled {
             addTestMethod(forClass: testCaseClass, element: element)
         }
         objc_registerClassPair(testCaseClass)
@@ -73,7 +73,7 @@ public struct SnapshotTestsGenerator {
             guard let testCase = _self as? SnapshotTestCase else { fatalError() }
 
             let recordMode: Bool
-            switch element.testState {
+            switch element.snapshot.state {
             case .final:
                 recordMode = false
             case .record:
@@ -84,8 +84,7 @@ public struct SnapshotTestsGenerator {
             }
 
             testCase.recordMode = recordMode
-
-            let container = UIView()
+            let container = element.snapshot.containerType.init()
             let view = element.view
             view.translatesAutoresizingMaskIntoConstraints = false
             container.addSubview(view)

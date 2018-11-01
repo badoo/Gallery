@@ -24,33 +24,45 @@
 
 import UIKit
 
-public struct ViewControllerItem: Item {
-
-    // MARK: - Private properties
-
-    private let viewControllerFactory: () -> UIViewController
+public struct VCSnapshotItem: Item {
 
     // MARK: - Instantiation
 
-    public init(title: String,
-                subtitle: String? = nil,
-                image: UIImage? = nil,
-                presentationStyle: PresentationStyle = .push,
-                viewControllerFactory: @escaping () -> UIViewController) {
-        self.title = title
-        self.image = image
-        self.subtitle = subtitle
-        self.preferredPresentationStyle = presentationStyle
-        self.viewControllerFactory = viewControllerFactory
+    public init(_ vcItem: ViewControllerItem, snapshot: Element.SnapshotTest) {
+        self.vcItem = vcItem
+        let vc = vcItem.viewController()
+        let view: UIView = vc.view
+        let elementTitle = String(describing: type(of: vc)) + "_" + vcItem.title
+        self.elementsProvider = ElementProvider(element: Element(title: elementTitle, view: view, width: 375, height: 568, snapshot: snapshot))
     }
 
     // MARK: - Item
-    public let title: String
-    public let image: UIImage?
-    public let subtitle: String?
-    public let preferredPresentationStyle: PresentationStyle
+
+    public var title: String {
+        return vcItem.title
+    }
+
+    public var subtitle: String? {
+        return vcItem.subtitle
+    }
+
+    public let elementsProvider: ElementsProviding?
+    public let vcItem: ViewControllerItem
 
     public func viewController() -> UIViewController {
-        return viewControllerFactory()
+        return vcItem.viewController()
+    }
+    
+    fileprivate struct ElementProvider: ElementsProviding {
+        
+        var testCaseName: String {
+            return element.title
+        }
+        
+        fileprivate let element: Element
+        func elements() -> [Element] {
+            return [element]
+        }
+        
     }
 }
