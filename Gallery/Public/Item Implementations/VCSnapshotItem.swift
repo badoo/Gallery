@@ -33,7 +33,7 @@ public struct VCSnapshotItem: Item {
         let vc = vcItem.viewController()
         let view: UIView = vc.view
         let elementTitle = String(describing: type(of: vc)) + "_" + vcItem.title
-        self.elementsProvider = ElementProvider(element: Element(title: elementTitle, view: view, width: 320, height: 568, snapshot: snapshot))
+        self.elementsProvider = ElementProvider(element: Element(title: elementTitle, view: view, width: 375, height: 568, snapshot: snapshot))
     }
 
     // MARK: - Item
@@ -46,7 +46,7 @@ public struct VCSnapshotItem: Item {
         return vcItem.subtitle
     }
 
-    public let elementsProvider: ElementsProviding
+    public let elementsProvider: ElementsProviding?
     public let vcItem: ViewControllerItem
 
     public func viewController() -> UIViewController {
