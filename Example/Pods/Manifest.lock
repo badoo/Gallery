@@ -1,0 +1,16 @@
+PODS:
+  - BadooGallery (0.1.9)
+
+DEPENDENCIES:
+  - BadooGallery (from `../`)
+
+EXTERNAL SOURCES:
+  BadooGallery:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BadooGallery: a065a5467c531f1ffdd014833ca5b60af70b75a8
+
+PODFILE CHECKSUM: 7baa0f381ed9831aff96a293d835153098ca8501
+
+COCOAPODS: 1.4.0
