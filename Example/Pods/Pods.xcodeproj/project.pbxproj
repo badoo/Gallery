@@ -1,0 +1,1184 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052B456757E51CED8C846F097103FDD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358D16FDCD6F660F6F2D95C7145814EC /* Assets.xcassets */; };
+		110020312557BA6E0AD500D5FFB04069 /* SnapshotTestsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C02A9823B0D5F1776734B50082E183 /* SnapshotTestsGenerator.swift */; };
+		145FAA541236B419D79EDF593A143CCA /* SectionsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E78CF2016CCF4A160715DA9C793E9 /* SectionsDataProvider.swift */; };
+		1E2F3ACEED26D03B7EEAE855E598C40F /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19ACC4EC5B9D6C6E25913CA8000E5B /* UIView+Autolayout.swift */; };
+		1E4480DCEDDEAD32001906493A1D3000 /* ElementsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57EBD11789FE6E3C40FF2E3E4467726 /* ElementsProviding.swift */; };
+		2254C44B73C06F69676827FFE7BEB151 /* UICollectionViewLayout+ElementsFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8112F203850B165A604D4ED6C5DD5D4C /* UICollectionViewLayout+ElementsFlowLayout.swift */; };
+		244B8D0C15C3A37131044D2557107962 /* PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B71251E73850E4640418AD70576E3D /* PresentationStyle.swift */; };
+		25BD72A8EEEE5012857D6313D349ADD7 /* Pods-BadooGallery_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D560A8B54853AD8D198C9B9F10076776 /* Pods-BadooGallery_Tests-dummy.m */; };
+		2A26642A5EF643384CCDE28443800094 /* Pods-BadooGallery_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DE1448C7D8B7347ECA3F68D1D61E09 /* Pods-BadooGallery_Example-dummy.m */; };
+		308255DB2265CEDA52F2239B440C582A /* BadooGallery-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E471593FBE25D753F5FF377DF06EB7 /* BadooGallery-dummy.m */; };
+		36A665A247475B046E29E7B42F984F88 /* Item+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA01877E47A7B11000102126EE8E4BE6 /* Item+Default.swift */; };
+		374CE220F2722CEC6B1796359E440AD6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4235DABB12F0E41B6E868B93F21FFF0 /* Section.swift */; };
+		3AAC3152E174F505357C7EDB7033D998 /* RootViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE48F2D9AAFF6B4D1C8DCF4DB4DE050 /* RootViewControllerFactory.swift */; };
+		41ED785C8F101AEFD88C3E6591C850B9 /* GlobalsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6BF630BB809C5894EC531147A84449 /* GlobalsConfiguration.swift */; };
+		4A2B4D8F40EF48824337692759F3ED00 /* TestCaseNameProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF456CE79CBD06C0CC4F805872F82C94 /* TestCaseNameProviding.swift */; };
+		4D047B7313BD3E8BC67127BE74B8FB75 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F30EA34C407CB169078A6BFCEEEC6 /* Observable.swift */; };
+		507D5530503CCE036276945850CD105B /* ViewControllerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0E7A0C8BAB673F5813F51582F31FCA /* ViewControllerItem.swift */; };
+		52EEC680363BD748B8ADDF62094D0D34 /* BadooGallery-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5C4DE0BC1C5B557E05FDE28E6BBFCF /* BadooGallery-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53717EBE1419D2EF9DFEEECE73D7804C /* FavoritesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455EB8B8D6375BDD3C51ACDC38792205 /* FavoritesServiceProtocol.swift */; };
+		5467D371EE00C2F4DF06BFE8500950E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		5503E4C64B32022904DC1D03110013E4 /* ElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9E60BC163C9195ED5CDBB5058E5330 /* ElementCollectionViewCell.swift */; };
+		5901FBDC919A90D2762B72BDE077AE0F /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE0A3FD27EC6D8854D9C9FD4799D4D8 /* TabViewController.swift */; };
+		5A1568E0FC51C458B3FFEC9EC6409093 /* FavoritesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B7BF8300C66A21E300D9F33A98999 /* FavoritesSection.swift */; };
+		5ABB9B0266F439C8E10639096A38440B /* FavoritesProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E370036BC9ABB9C63DC1C9282B4B17E /* FavoritesProviding.swift */; };
+		603640FC2E79863A60295783D906C3B9 /* SectionsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986FBF1912C96F00D2FE57A78BA34A24 /* SectionsItem.swift */; };
+		636477C7948190120F2E1E9AEAB8E83A /* FavoritesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894852C6DE72AF5D836E68D5CA3BF39 /* FavoritesStorage.swift */; };
+		6DD3A715BECA4FD86FC114A94D22ED3A /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAB17B5D2137D4CA31696B2F33EF15A /* ItemStore.swift */; };
+		7B7B351B3FCAA768F7EC24D1665CF50E /* Pods-BadooGallery_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B13DDD6419D4D19314E4BFD0F0192DDF /* Pods-BadooGallery_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C580F2C5D5A0633E04AC4A3ACB8D5FE /* ElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF8BC580876CE3C10BD9D47468D7A17 /* ElementsViewController.swift */; };
+		84DDDF62AE4742304B7A144B1EF85A41 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5013A83D64AEF1D1F679127B132440 /* Globals.swift */; };
+		8BCC7BD051D4851855E3041DD34E6909 /* Pods-BadooGallery_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A843A578A01A02C7AD6DE2AA057B4F40 /* Pods-BadooGallery_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90A54862106B883EA534F2F57E9BA49C /* SnapshotTestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2AFB690EE1F7983D35AD4DDA8736C3 /* SnapshotTestState.swift */; };
+		9861640E669199DA1954539CA2DBC932 /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E53DF1BADD218933E4D5194C13A721 /* SectionsViewController.swift */; };
+		9F36B4B640F77B919262012D7AB7A524 /* Item+Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE97974552E402ECDA98CC9E2BA92CE /* Item+Presentation.swift */; };
+		A60D85935E9D001BB47E4CA80C9D9594 /* CartProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699832AA46256FD2C10543A5209A4BF6 /* CartProduct.swift */; };
+		A61801849DC50DA04B12E811839569CB /* StaticSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8978D1E51FED7ADBA563A6B6D9152FA /* StaticSection.swift */; };
+		A6FD80062CAB28737A3FD4263B4F00DF /* FavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCC61849282936BC24F9E2C3797EE52 /* FavoritesService.swift */; };
+		A916A9937787F6F4473B27BC779C81A2 /* NestedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745CF0ADF24B194895E55F181C08018A /* NestedItem.swift */; };
+		B23069F7845D635C385C6081DBB1A5C4 /* ViewControllerProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8092E0FD3EF2CAB02D6282359D3B135 /* ViewControllerProviding.swift */; };
+		B40D995A93D8397E23EB4F31DDD0FC93 /* VCSnapshotItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE318359B6CE80B2B1182D81765A4EE /* VCSnapshotItem.swift */; };
+		B55AA9E7AB5723C8E873FC16E9EBBCAC /* ElementsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC5ACE664C495BD4AC74626050505C /* ElementsItem.swift */; };
+		BAA5331E85CE56DA86AB77F133DAAFAF /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F032B8BD7E19240B008EFA23BF1AE /* TabItem.swift */; };
+		C68F5DC3030A1595669D44A9A320A1AD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFEAEBA4207FCFA8DD9F1E51D28CD42 /* Item.swift */; };
+		D354F55E2EBD74EC36FC956CA5ADC45B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		E13D38E7D51A3A0122A5A1238B358441 /* BadooGallery.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A1C9066604502624F69BA8CEE17A01BA /* BadooGallery.bundle */; };
+		ECA9B62BBA88BE807AB01E3AEC28DDD7 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A54E313C432EC361E9CBD496E7CDF /* SnapshotTestCase.swift */; };
+		F0E1AA07BDC6EDCF28055E72A1FB0BAC /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C9A6377CCA6261DF7BFD5C7805BFFD /* Element.swift */; };
+		F17CFB03609C2E32C051B149DD7521EC /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F625DC1029D0FC1EF0CB2253E417A85 /* SectionCell.swift */; };
+		F942F7969780756AD2CD8C7633106849 /* ItemIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8CEEE216CE6C10E85D72D0D5CC08D9 /* ItemIdentifier.swift */; };
+		F9445C427699A38E9C7EBF2A735407BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61CD56A9E6B7DC5B9559BEBF8BCFA770 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 866BED39FD9154390B5FAD13544EE48B;
+			remoteInfo = "BadooGallery-BadooGallery";
+		};
+		C7A04CBE55B6AA60BC257867CE62B684 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDFE9173675F9FF1F09492201E6901A0;
+			remoteInfo = BadooGallery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B2665D8AA4698AB360FCE254E62EFD /* BadooGallery.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BadooGallery.modulemap; sourceTree = "<group>"; };
+		06D8A3D2FFFA7C697ED5DDE4CB68C668 /* Pods-BadooGallery_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BadooGallery_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0D0E7A0C8BAB673F5813F51582F31FCA /* ViewControllerItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerItem.swift; sourceTree = "<group>"; };
+		0DF8BC580876CE3C10BD9D47468D7A17 /* ElementsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElementsViewController.swift; sourceTree = "<group>"; };
+		0F19ACC4EC5B9D6C6E25913CA8000E5B /* UIView+Autolayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		0F625DC1029D0FC1EF0CB2253E417A85 /* SectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
+		1EE97974552E402ECDA98CC9E2BA92CE /* Item+Presentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Item+Presentation.swift"; sourceTree = "<group>"; };
+		1EF8E63F01D2EBCEA758602F6566AFD0 /* Pods-BadooGallery_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BadooGallery_Tests-resources.sh"; sourceTree = "<group>"; };
+		221C9407248D43863E107D0A86C3FC0C /* Pods-BadooGallery_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BadooGallery_Example-frameworks.sh"; sourceTree = "<group>"; };
+		276A4D518AF6DFBA9A24F9B5C32DBE52 /* Pods-BadooGallery_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BadooGallery_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		29C9A6377CCA6261DF7BFD5C7805BFFD /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		2DE0A3FD27EC6D8854D9C9FD4799D4D8 /* TabViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		2E370036BC9ABB9C63DC1C9282B4B17E /* FavoritesProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoritesProviding.swift; sourceTree = "<group>"; };
+		31B0D40AF1641789AB7A1D67D72721A6 /* BadooGallery-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BadooGallery-prefix.pch"; sourceTree = "<group>"; };
+		358D16FDCD6F660F6F2D95C7145814EC /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Gallery/Internal/Assets.xcassets; sourceTree = "<group>"; };
+		392D608B47A61B34CAE70C703B719AAF /* Pods_BadooGallery_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BadooGallery_Tests.framework; path = "Pods-BadooGallery_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0E429E9B416D8419DB754C53E20D67 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		429E78CF2016CCF4A160715DA9C793E9 /* SectionsDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionsDataProvider.swift; sourceTree = "<group>"; };
+		42A6DCE4CC2A9D319AC3EB5994EDBA46 /* Pods-BadooGallery_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BadooGallery_Tests.modulemap"; sourceTree = "<group>"; };
+		4359FBAAF59E54D0572FEB42205F7C6C /* Pods-BadooGallery_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BadooGallery_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		455EB8B8D6375BDD3C51ACDC38792205 /* FavoritesServiceProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoritesServiceProtocol.swift; sourceTree = "<group>"; };
+		470B58E7D89964F554A6FB7B1050969F /* Pods-BadooGallery_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BadooGallery_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		57346312056BE8B864BEA06407448A50 /* Pods-BadooGallery_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BadooGallery_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5EA78442F63F427375B4C8F0534834FB /* Pods-BadooGallery_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BadooGallery_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		62A1C0A1AF5CBB5CDB7F1590C6FE03F0 /* Pods_BadooGallery_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BadooGallery_Example.framework; path = "Pods-BadooGallery_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DE1448C7D8B7347ECA3F68D1D61E09 /* Pods-BadooGallery_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BadooGallery_Example-dummy.m"; sourceTree = "<group>"; };
+		66E471593FBE25D753F5FF377DF06EB7 /* BadooGallery-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BadooGallery-dummy.m"; sourceTree = "<group>"; };
+		67C02A9823B0D5F1776734B50082E183 /* SnapshotTestsGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapshotTestsGenerator.swift; sourceTree = "<group>"; };
+		699832AA46256FD2C10543A5209A4BF6 /* CartProduct.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CartProduct.swift; sourceTree = "<group>"; };
+		6AE48F2D9AAFF6B4D1C8DCF4DB4DE050 /* RootViewControllerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RootViewControllerFactory.swift; sourceTree = "<group>"; };
+		6B53D38E4244A401AB66038218210FB1 /* ResourceBundle-BadooGallery-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BadooGallery-Info.plist"; sourceTree = "<group>"; };
+		6B9E60BC163C9195ED5CDBB5058E5330 /* ElementCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElementCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CCC61849282936BC24F9E2C3797EE52 /* FavoritesService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoritesService.swift; sourceTree = "<group>"; };
+		6FE318359B6CE80B2B1182D81765A4EE /* VCSnapshotItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VCSnapshotItem.swift; sourceTree = "<group>"; };
+		73E53DF1BADD218933E4D5194C13A721 /* SectionsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionsViewController.swift; sourceTree = "<group>"; };
+		745CF0ADF24B194895E55F181C08018A /* NestedItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NestedItem.swift; sourceTree = "<group>"; };
+		8112F203850B165A604D4ED6C5DD5D4C /* UICollectionViewLayout+ElementsFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+ElementsFlowLayout.swift"; sourceTree = "<group>"; };
+		82C0C1F115DACAA6F97E14040335AAC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840F032B8BD7E19240B008EFA23BF1AE /* TabItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		894B7BF8300C66A21E300D9F33A98999 /* FavoritesSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoritesSection.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		946A54E313C432EC361E9CBD496E7CDF /* SnapshotTestCase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
+		95B71251E73850E4640418AD70576E3D /* PresentationStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresentationStyle.swift; sourceTree = "<group>"; };
+		986FBF1912C96F00D2FE57A78BA34A24 /* SectionsItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionsItem.swift; sourceTree = "<group>"; };
+		A1C9066604502624F69BA8CEE17A01BA /* BadooGallery.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BadooGallery.bundle; path = "BadooGallery-BadooGallery.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8092E0FD3EF2CAB02D6282359D3B135 /* ViewControllerProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerProviding.swift; sourceTree = "<group>"; };
+		A843A578A01A02C7AD6DE2AA057B4F40 /* Pods-BadooGallery_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BadooGallery_Example-umbrella.h"; sourceTree = "<group>"; };
+		AA5C4DE0BC1C5B557E05FDE28E6BBFCF /* BadooGallery-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BadooGallery-umbrella.h"; sourceTree = "<group>"; };
+		AAC2FAD19C0FE54C658AB4B717C41272 /* BadooGallery.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BadooGallery.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB6BF630BB809C5894EC531147A84449 /* GlobalsConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GlobalsConfiguration.swift; sourceTree = "<group>"; };
+		ABFEAEBA4207FCFA8DD9F1E51D28CD42 /* Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		AC1F30EA34C407CB169078A6BFCEEEC6 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		AF456CE79CBD06C0CC4F805872F82C94 /* TestCaseNameProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestCaseNameProviding.swift; sourceTree = "<group>"; };
+		B13DDD6419D4D19314E4BFD0F0192DDF /* Pods-BadooGallery_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BadooGallery_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B23D368851287DF55592D1852EDD10A8 /* BadooGallery.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BadooGallery.xcconfig; sourceTree = "<group>"; };
+		BC5013A83D64AEF1D1F679127B132440 /* Globals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		CA01877E47A7B11000102126EE8E4BE6 /* Item+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Item+Default.swift"; sourceTree = "<group>"; };
+		CABE6BAEA52608CBD9133C10B0A8D2CF /* Pods-BadooGallery_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BadooGallery_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CB2AFB690EE1F7983D35AD4DDA8736C3 /* SnapshotTestState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SnapshotTestState.swift; sourceTree = "<group>"; };
+		CC3CE31E0EB28B66812C823134A5118D /* Pods-BadooGallery_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BadooGallery_Example.modulemap"; sourceTree = "<group>"; };
+		D3CC5ACE664C495BD4AC74626050505C /* ElementsItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElementsItem.swift; sourceTree = "<group>"; };
+		D560A8B54853AD8D198C9B9F10076776 /* Pods-BadooGallery_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BadooGallery_Tests-dummy.m"; sourceTree = "<group>"; };
+		D894852C6DE72AF5D836E68D5CA3BF39 /* FavoritesStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoritesStorage.swift; sourceTree = "<group>"; };
+		D8978D1E51FED7ADBA563A6B6D9152FA /* StaticSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StaticSection.swift; sourceTree = "<group>"; };
+		E4235DABB12F0E41B6E868B93F21FFF0 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		E8321779430B32913D95A9FA08182082 /* Pods-BadooGallery_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BadooGallery_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9C44083142873D17095895C5B0C7B97 /* BadooGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BadooGallery.framework; path = BadooGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB868FFAAE7BF2DE36841515FAF87245 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE5898803A5FC39C84E231450EF318E9 /* Pods-BadooGallery_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BadooGallery_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F3A1749965D68137AA7EB2DAE727B312 /* Pods-BadooGallery_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BadooGallery_Example-resources.sh"; sourceTree = "<group>"; };
+		F57EBD11789FE6E3C40FF2E3E4467726 /* ElementsProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ElementsProviding.swift; sourceTree = "<group>"; };
+		FA05611E07D807CE4184759A759C7079 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAB17B5D2137D4CA31696B2F33EF15A /* ItemStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		FD8CEEE216CE6C10E85D72D0D5CC08D9 /* ItemIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ItemIdentifier.swift; sourceTree = "<group>"; };
+		FFE252BB35EBD9B6B24DCDD9262D3297 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13C7043E6E20829EE78E37DEA5B4AADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9445C427699A38E9C7EBF2A735407BA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19A64DC3408EC8F79ADC864DCFA44463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D354F55E2EBD74EC36FC956CA5ADC45B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E708023D5A199FA0C8931BB963821CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1316C23C8D7305C981A3921ABC0B25D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5467D371EE00C2F4DF06BFE8500950E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F2BF8D19C3FD90835AD23A892519D3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				00B2665D8AA4698AB360FCE254E62EFD /* BadooGallery.modulemap */,
+				B23D368851287DF55592D1852EDD10A8 /* BadooGallery.xcconfig */,
+				66E471593FBE25D753F5FF377DF06EB7 /* BadooGallery-dummy.m */,
+				31B0D40AF1641789AB7A1D67D72721A6 /* BadooGallery-prefix.pch */,
+				AA5C4DE0BC1C5B557E05FDE28E6BBFCF /* BadooGallery-umbrella.h */,
+				82C0C1F115DACAA6F97E14040335AAC5 /* Info.plist */,
+				6B53D38E4244A401AB66038218210FB1 /* ResourceBundle-BadooGallery-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BadooGallery";
+			sourceTree = "<group>";
+		};
+		12D70E5313CBD104A8A24DFF6E6A9194 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				0F625DC1029D0FC1EF0CB2253E417A85 /* SectionCell.swift */,
+				429E78CF2016CCF4A160715DA9C793E9 /* SectionsDataProvider.swift */,
+				73E53DF1BADD218933E4D5194C13A721 /* SectionsViewController.swift */,
+			);
+			name = Sections;
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		15792DF0EB48DE43F21D547B17AFFE36 /* Item Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D3CC5ACE664C495BD4AC74626050505C /* ElementsItem.swift */,
+				986FBF1912C96F00D2FE57A78BA34A24 /* SectionsItem.swift */,
+				840F032B8BD7E19240B008EFA23BF1AE /* TabItem.swift */,
+				6FE318359B6CE80B2B1182D81765A4EE /* VCSnapshotItem.swift */,
+				0D0E7A0C8BAB673F5813F51582F31FCA /* ViewControllerItem.swift */,
+			);
+			name = "Item Implementations";
+			path = "Item Implementations";
+			sourceTree = "<group>";
+		};
+		182FABD87A756C7D1E191002075D3BA6 /* Snapshot */ = {
+			isa = PBXGroup;
+			children = (
+				946A54E313C432EC361E9CBD496E7CDF /* SnapshotTestCase.swift */,
+				67C02A9823B0D5F1776734B50082E183 /* SnapshotTestsGenerator.swift */,
+				CB2AFB690EE1F7983D35AD4DDA8736C3 /* SnapshotTestState.swift */,
+				AF456CE79CBD06C0CC4F805872F82C94 /* TestCaseNameProviding.swift */,
+			);
+			name = Snapshot;
+			path = Snapshot;
+			sourceTree = "<group>";
+		};
+		22A3A0E2E37FFACE42FE26BBD7CCB2C9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AC1F30EA34C407CB169078A6BFCEEEC6 /* Observable.swift */,
+				0F19ACC4EC5B9D6C6E25913CA8000E5B /* UIView+Autolayout.swift */,
+			);
+			name = Utilities;
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2FF65EE0CF69A3F47588DD1C628B269D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				699832AA46256FD2C10543A5209A4BF6 /* CartProduct.swift */,
+			);
+			name = Helpers;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		43512A7FD7567B814E1E96E9E3C9E9BF /* BadooGallery */ = {
+			isa = PBXGroup;
+			children = (
+				4EFFA1E4A522C581591E8701986E1052 /* Internal */,
+				56BCC51233AB42D6854579A2B52BB399 /* Pod */,
+				A90C91FD5B4F5660D6E854EBF3C1C094 /* Public */,
+				BC4CA27D4B9875EB2F76982CD672FDB0 /* Resources */,
+				10F2BF8D19C3FD90835AD23A892519D3 /* Support Files */,
+			);
+			name = BadooGallery;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4EFFA1E4A522C581591E8701986E1052 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				E05A753D97F2B14319C2BB5772AC6F8C /* Controllers */,
+				70F6E6E14E491023A99CB986BF7FBA83 /* Items */,
+				DE60C5F5409D8580119FD1A08338DE8B /* Services */,
+				22A3A0E2E37FFACE42FE26BBD7CCB2C9 /* Utilities */,
+			);
+			name = Internal;
+			path = Gallery/Internal;
+			sourceTree = "<group>";
+		};
+		56BCC51233AB42D6854579A2B52BB399 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AAC2FAD19C0FE54C658AB4B717C41272 /* BadooGallery.podspec */,
+				FFE252BB35EBD9B6B24DCDD9262D3297 /* LICENSE */,
+				3B0E429E9B416D8419DB754C53E20D67 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		60E74385BC0924F25FACC0647E1FBD7C /* Element */ = {
+			isa = PBXGroup;
+			children = (
+				29C9A6377CCA6261DF7BFD5C7805BFFD /* Element.swift */,
+				F57EBD11789FE6E3C40FF2E3E4467726 /* ElementsProviding.swift */,
+			);
+			name = Element;
+			path = Element;
+			sourceTree = "<group>";
+		};
+		63D85C2A938791002DFBF2D3DC23C241 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				6B9E60BC163C9195ED5CDBB5058E5330 /* ElementCollectionViewCell.swift */,
+				0DF8BC580876CE3C10BD9D47468D7A17 /* ElementsViewController.swift */,
+				8112F203850B165A604D4ED6C5DD5D4C /* UICollectionViewLayout+ElementsFlowLayout.swift */,
+			);
+			name = Elements;
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		70F6E6E14E491023A99CB986BF7FBA83 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				1EE97974552E402ECDA98CC9E2BA92CE /* Item+Presentation.swift */,
+				745CF0ADF24B194895E55F181C08018A /* NestedItem.swift */,
+			);
+			name = Items;
+			path = Items;
+			sourceTree = "<group>";
+		};
+		72A77B1B97919DF1DD698CBEA14F3E09 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				2DE0A3FD27EC6D8854D9C9FD4799D4D8 /* TabViewController.swift */,
+			);
+			name = Tab;
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				C494C7E79ACABAE26E8208572F5929C8 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				FB7F4B19C3028F8A556ACEE18C2EF898 /* Products */,
+				A7095858532BD6023EC4A4557F4102EA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A7095858532BD6023EC4A4557F4102EA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F62108787DB305DAD47C37777CB21B6B /* Pods-BadooGallery_Example */,
+				AE0B3E9E265AF03E42E63DC0A14ADF98 /* Pods-BadooGallery_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A90C91FD5B4F5660D6E854EBF3C1C094 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				60E74385BC0924F25FACC0647E1FBD7C /* Element */,
+				C5FB7663AFC335A3C5E08809FE634E0E /* Entry Point */,
+				2FF65EE0CF69A3F47588DD1C628B269D /* Helpers */,
+				C11499EF068AFC86170251653D1410E6 /* Item */,
+				15792DF0EB48DE43F21D547B17AFFE36 /* Item Implementations */,
+				C8D3BCCB613B45134DA34E8B6CD5E150 /* Section */,
+				182FABD87A756C7D1E191002075D3BA6 /* Snapshot */,
+			);
+			name = Public;
+			path = Gallery/Public;
+			sourceTree = "<group>";
+		};
+		AE0B3E9E265AF03E42E63DC0A14ADF98 /* Pods-BadooGallery_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EB868FFAAE7BF2DE36841515FAF87245 /* Info.plist */,
+				42A6DCE4CC2A9D319AC3EB5994EDBA46 /* Pods-BadooGallery_Tests.modulemap */,
+				06D8A3D2FFFA7C697ED5DDE4CB68C668 /* Pods-BadooGallery_Tests-acknowledgements.markdown */,
+				276A4D518AF6DFBA9A24F9B5C32DBE52 /* Pods-BadooGallery_Tests-acknowledgements.plist */,
+				D560A8B54853AD8D198C9B9F10076776 /* Pods-BadooGallery_Tests-dummy.m */,
+				CABE6BAEA52608CBD9133C10B0A8D2CF /* Pods-BadooGallery_Tests-frameworks.sh */,
+				1EF8E63F01D2EBCEA758602F6566AFD0 /* Pods-BadooGallery_Tests-resources.sh */,
+				B13DDD6419D4D19314E4BFD0F0192DDF /* Pods-BadooGallery_Tests-umbrella.h */,
+				E8321779430B32913D95A9FA08182082 /* Pods-BadooGallery_Tests.debug.xcconfig */,
+				470B58E7D89964F554A6FB7B1050969F /* Pods-BadooGallery_Tests.release.xcconfig */,
+			);
+			name = "Pods-BadooGallery_Tests";
+			path = "Target Support Files/Pods-BadooGallery_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC4CA27D4B9875EB2F76982CD672FDB0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				358D16FDCD6F660F6F2D95C7145814EC /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C11499EF068AFC86170251653D1410E6 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				ABFEAEBA4207FCFA8DD9F1E51D28CD42 /* Item.swift */,
+				CA01877E47A7B11000102126EE8E4BE6 /* Item+Default.swift */,
+				FD8CEEE216CE6C10E85D72D0D5CC08D9 /* ItemIdentifier.swift */,
+				95B71251E73850E4640418AD70576E3D /* PresentationStyle.swift */,
+				A8092E0FD3EF2CAB02D6282359D3B135 /* ViewControllerProviding.swift */,
+			);
+			name = Item;
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C494C7E79ACABAE26E8208572F5929C8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43512A7FD7567B814E1E96E9E3C9E9BF /* BadooGallery */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C5FB7663AFC335A3C5E08809FE634E0E /* Entry Point */ = {
+			isa = PBXGroup;
+			children = (
+				AB6BF630BB809C5894EC531147A84449 /* GlobalsConfiguration.swift */,
+				FCAB17B5D2137D4CA31696B2F33EF15A /* ItemStore.swift */,
+				6AE48F2D9AAFF6B4D1C8DCF4DB4DE050 /* RootViewControllerFactory.swift */,
+			);
+			name = "Entry Point";
+			path = "Entry Point";
+			sourceTree = "<group>";
+		};
+		C8D3BCCB613B45134DA34E8B6CD5E150 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				894B7BF8300C66A21E300D9F33A98999 /* FavoritesSection.swift */,
+				E4235DABB12F0E41B6E868B93F21FFF0 /* Section.swift */,
+				D8978D1E51FED7ADBA563A6B6D9152FA /* StaticSection.swift */,
+			);
+			name = Section;
+			path = Section;
+			sourceTree = "<group>";
+		};
+		DE60C5F5409D8580119FD1A08338DE8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC5013A83D64AEF1D1F679127B132440 /* Globals.swift */,
+				FF4DA74580DEA60678C301C5ED14C044 /* Favorites */,
+			);
+			name = Services;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E05A753D97F2B14319C2BB5772AC6F8C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63D85C2A938791002DFBF2D3DC23C241 /* Elements */,
+				12D70E5313CBD104A8A24DFF6E6A9194 /* Sections */,
+				72A77B1B97919DF1DD698CBEA14F3E09 /* Tab */,
+			);
+			name = Controllers;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F62108787DB305DAD47C37777CB21B6B /* Pods-BadooGallery_Example */ = {
+			isa = PBXGroup;
+			children = (
+				FA05611E07D807CE4184759A759C7079 /* Info.plist */,
+				CC3CE31E0EB28B66812C823134A5118D /* Pods-BadooGallery_Example.modulemap */,
+				4359FBAAF59E54D0572FEB42205F7C6C /* Pods-BadooGallery_Example-acknowledgements.markdown */,
+				5EA78442F63F427375B4C8F0534834FB /* Pods-BadooGallery_Example-acknowledgements.plist */,
+				64DE1448C7D8B7347ECA3F68D1D61E09 /* Pods-BadooGallery_Example-dummy.m */,
+				221C9407248D43863E107D0A86C3FC0C /* Pods-BadooGallery_Example-frameworks.sh */,
+				F3A1749965D68137AA7EB2DAE727B312 /* Pods-BadooGallery_Example-resources.sh */,
+				A843A578A01A02C7AD6DE2AA057B4F40 /* Pods-BadooGallery_Example-umbrella.h */,
+				57346312056BE8B864BEA06407448A50 /* Pods-BadooGallery_Example.debug.xcconfig */,
+				EE5898803A5FC39C84E231450EF318E9 /* Pods-BadooGallery_Example.release.xcconfig */,
+			);
+			name = "Pods-BadooGallery_Example";
+			path = "Target Support Files/Pods-BadooGallery_Example";
+			sourceTree = "<group>";
+		};
+		FB7F4B19C3028F8A556ACEE18C2EF898 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1C9066604502624F69BA8CEE17A01BA /* BadooGallery.bundle */,
+				E9C44083142873D17095895C5B0C7B97 /* BadooGallery.framework */,
+				62A1C0A1AF5CBB5CDB7F1590C6FE03F0 /* Pods_BadooGallery_Example.framework */,
+				392D608B47A61B34CAE70C703B719AAF /* Pods_BadooGallery_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF4DA74580DEA60678C301C5ED14C044 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2E370036BC9ABB9C63DC1C9282B4B17E /* FavoritesProviding.swift */,
+				6CCC61849282936BC24F9E2C3797EE52 /* FavoritesService.swift */,
+				455EB8B8D6375BDD3C51ACDC38792205 /* FavoritesServiceProtocol.swift */,
+				D894852C6DE72AF5D836E68D5CA3BF39 /* FavoritesStorage.swift */,
+			);
+			name = Favorites;
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C91BA7EBCAE15C1027694F01E6C3E553 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BCC7BD051D4851855E3041DD34E6909 /* Pods-BadooGallery_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2F47130A7F92A078634987BBD2F08AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7B351B3FCAA768F7EC24D1665CF50E /* Pods-BadooGallery_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3AF0D4E48901B2C91D70360E8F1736C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52EEC680363BD748B8ADDF62094D0D34 /* BadooGallery-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		441C312AE271DA7534838B009BC7E4DC /* Pods-BadooGallery_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25A01F84D966CC5F9FE75B8EA7A7C0C /* Build configuration list for PBXNativeTarget "Pods-BadooGallery_Example" */;
+			buildPhases = (
+				C91BA7EBCAE15C1027694F01E6C3E553 /* Headers */,
+				CC9085BB8DEE44B460E369819768C10B /* Sources */,
+				E1316C23C8D7305C981A3921ABC0B25D /* Frameworks */,
+				38CF40D44C6229B2AF1275DC79DB63EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD96BEDBF6CB0F984F6F14699C304CE8 /* PBXTargetDependency */,
+			);
+			name = "Pods-BadooGallery_Example";
+			productName = "Pods-BadooGallery_Example";
+			productReference = 62A1C0A1AF5CBB5CDB7F1590C6FE03F0 /* Pods_BadooGallery_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		866BED39FD9154390B5FAD13544EE48B /* BadooGallery-BadooGallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53CE5EC4AB80C4338DFF1619A2F36B8E /* Build configuration list for PBXNativeTarget "BadooGallery-BadooGallery" */;
+			buildPhases = (
+				E214AE0B809156B7CBE76C0C5B1FBDB5 /* Sources */,
+				2E708023D5A199FA0C8931BB963821CE /* Frameworks */,
+				5243B02F91A2CE09643D03E71A65E6B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BadooGallery-BadooGallery";
+			productName = "BadooGallery-BadooGallery";
+			productReference = A1C9066604502624F69BA8CEE17A01BA /* BadooGallery.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		99CAD14CC618C8FDF854951F3595DDE6 /* Pods-BadooGallery_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8DD6C32F9CB6EB7CF26D425ACF86E0A /* Build configuration list for PBXNativeTarget "Pods-BadooGallery_Tests" */;
+			buildPhases = (
+				E2F47130A7F92A078634987BBD2F08AF /* Headers */,
+				3C853A0E9D1E8005FD059CB2A66101A1 /* Sources */,
+				19A64DC3408EC8F79ADC864DCFA44463 /* Frameworks */,
+				EDE371D2A079EA420E625B993D37DA74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BadooGallery_Tests";
+			productName = "Pods-BadooGallery_Tests";
+			productReference = 392D608B47A61B34CAE70C703B719AAF /* Pods_BadooGallery_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDFE9173675F9FF1F09492201E6901A0 /* BadooGallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50D8C193A8C075E650792683BF557748 /* Build configuration list for PBXNativeTarget "BadooGallery" */;
+			buildPhases = (
+				E3AF0D4E48901B2C91D70360E8F1736C /* Headers */,
+				BBC2CB54FB39EE3A668CF262962D9BAE /* Sources */,
+				13C7043E6E20829EE78E37DEA5B4AADB /* Frameworks */,
+				AB6EE19259F6B9262CF9A45B48BD67E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3471DB39008F40D49E99B87FAB248DC6 /* PBXTargetDependency */,
+			);
+			name = BadooGallery;
+			productName = BadooGallery;
+			productReference = E9C44083142873D17095895C5B0C7B97 /* BadooGallery.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FB7F4B19C3028F8A556ACEE18C2EF898 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDFE9173675F9FF1F09492201E6901A0 /* BadooGallery */,
+				866BED39FD9154390B5FAD13544EE48B /* BadooGallery-BadooGallery */,
+				441C312AE271DA7534838B009BC7E4DC /* Pods-BadooGallery_Example */,
+				99CAD14CC618C8FDF854951F3595DDE6 /* Pods-BadooGallery_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38CF40D44C6229B2AF1275DC79DB63EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5243B02F91A2CE09643D03E71A65E6B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052B456757E51CED8C846F097103FDD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB6EE19259F6B9262CF9A45B48BD67E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13D38E7D51A3A0122A5A1238B358441 /* BadooGallery.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE371D2A079EA420E625B993D37DA74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C853A0E9D1E8005FD059CB2A66101A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25BD72A8EEEE5012857D6313D349ADD7 /* Pods-BadooGallery_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC2CB54FB39EE3A668CF262962D9BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308255DB2265CEDA52F2239B440C582A /* BadooGallery-dummy.m in Sources */,
+				A60D85935E9D001BB47E4CA80C9D9594 /* CartProduct.swift in Sources */,
+				F0E1AA07BDC6EDCF28055E72A1FB0BAC /* Element.swift in Sources */,
+				5503E4C64B32022904DC1D03110013E4 /* ElementCollectionViewCell.swift in Sources */,
+				B55AA9E7AB5723C8E873FC16E9EBBCAC /* ElementsItem.swift in Sources */,
+				1E4480DCEDDEAD32001906493A1D3000 /* ElementsProviding.swift in Sources */,
+				7C580F2C5D5A0633E04AC4A3ACB8D5FE /* ElementsViewController.swift in Sources */,
+				5ABB9B0266F439C8E10639096A38440B /* FavoritesProviding.swift in Sources */,
+				5A1568E0FC51C458B3FFEC9EC6409093 /* FavoritesSection.swift in Sources */,
+				A6FD80062CAB28737A3FD4263B4F00DF /* FavoritesService.swift in Sources */,
+				53717EBE1419D2EF9DFEEECE73D7804C /* FavoritesServiceProtocol.swift in Sources */,
+				636477C7948190120F2E1E9AEAB8E83A /* FavoritesStorage.swift in Sources */,
+				84DDDF62AE4742304B7A144B1EF85A41 /* Globals.swift in Sources */,
+				41ED785C8F101AEFD88C3E6591C850B9 /* GlobalsConfiguration.swift in Sources */,
+				36A665A247475B046E29E7B42F984F88 /* Item+Default.swift in Sources */,
+				9F36B4B640F77B919262012D7AB7A524 /* Item+Presentation.swift in Sources */,
+				C68F5DC3030A1595669D44A9A320A1AD /* Item.swift in Sources */,
+				F942F7969780756AD2CD8C7633106849 /* ItemIdentifier.swift in Sources */,
+				6DD3A715BECA4FD86FC114A94D22ED3A /* ItemStore.swift in Sources */,
+				A916A9937787F6F4473B27BC779C81A2 /* NestedItem.swift in Sources */,
+				4D047B7313BD3E8BC67127BE74B8FB75 /* Observable.swift in Sources */,
+				244B8D0C15C3A37131044D2557107962 /* PresentationStyle.swift in Sources */,
+				3AAC3152E174F505357C7EDB7033D998 /* RootViewControllerFactory.swift in Sources */,
+				374CE220F2722CEC6B1796359E440AD6 /* Section.swift in Sources */,
+				F17CFB03609C2E32C051B149DD7521EC /* SectionCell.swift in Sources */,
+				145FAA541236B419D79EDF593A143CCA /* SectionsDataProvider.swift in Sources */,
+				603640FC2E79863A60295783D906C3B9 /* SectionsItem.swift in Sources */,
+				9861640E669199DA1954539CA2DBC932 /* SectionsViewController.swift in Sources */,
+				ECA9B62BBA88BE807AB01E3AEC28DDD7 /* SnapshotTestCase.swift in Sources */,
+				110020312557BA6E0AD500D5FFB04069 /* SnapshotTestsGenerator.swift in Sources */,
+				90A54862106B883EA534F2F57E9BA49C /* SnapshotTestState.swift in Sources */,
+				A61801849DC50DA04B12E811839569CB /* StaticSection.swift in Sources */,
+				BAA5331E85CE56DA86AB77F133DAAFAF /* TabItem.swift in Sources */,
+				5901FBDC919A90D2762B72BDE077AE0F /* TabViewController.swift in Sources */,
+				4A2B4D8F40EF48824337692759F3ED00 /* TestCaseNameProviding.swift in Sources */,
+				2254C44B73C06F69676827FFE7BEB151 /* UICollectionViewLayout+ElementsFlowLayout.swift in Sources */,
+				1E2F3ACEED26D03B7EEAE855E598C40F /* UIView+Autolayout.swift in Sources */,
+				B40D995A93D8397E23EB4F31DDD0FC93 /* VCSnapshotItem.swift in Sources */,
+				507D5530503CCE036276945850CD105B /* ViewControllerItem.swift in Sources */,
+				B23069F7845D635C385C6081DBB1A5C4 /* ViewControllerProviding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9085BB8DEE44B460E369819768C10B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A26642A5EF643384CCDE28443800094 /* Pods-BadooGallery_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E214AE0B809156B7CBE76C0C5B1FBDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3471DB39008F40D49E99B87FAB248DC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BadooGallery-BadooGallery";
+			target = 866BED39FD9154390B5FAD13544EE48B /* BadooGallery-BadooGallery */;
+			targetProxy = 61CD56A9E6B7DC5B9559BEBF8BCFA770 /* PBXContainerItemProxy */;
+		};
+		AD96BEDBF6CB0F984F6F14699C304CE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BadooGallery;
+			target = EDFE9173675F9FF1F09492201E6901A0 /* BadooGallery */;
+			targetProxy = C7A04CBE55B6AA60BC257867CE62B684 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D99C9C0981847E02EE16AE52A087623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		36C7314C6C4373B21867C63616921C92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23D368851287DF55592D1852EDD10A8 /* BadooGallery.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BadooGallery/BadooGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BadooGallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BadooGallery/BadooGallery.modulemap";
+				PRODUCT_NAME = BadooGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3EB60BFEE3A34B9F498C83772A126CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8321779430B32913D95A9FA08182082 /* Pods-BadooGallery_Tests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BadooGallery_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BadooGallery_Tests/Pods-BadooGallery_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BadooGallery_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7D3931821001480D57CB896C690DC290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 470B58E7D89964F554A6FB7B1050969F /* Pods-BadooGallery_Tests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BadooGallery_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BadooGallery_Tests/Pods-BadooGallery_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BadooGallery_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8826C17603E2A9F5833B7F9B92B6FD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23D368851287DF55592D1852EDD10A8 /* BadooGallery.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BadooGallery";
+				INFOPLIST_FILE = "Target Support Files/BadooGallery/ResourceBundle-BadooGallery-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = BadooGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AAF5FFFAD785941D9845A9ABD19476CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23D368851287DF55592D1852EDD10A8 /* BadooGallery.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BadooGallery";
+				INFOPLIST_FILE = "Target Support Files/BadooGallery/ResourceBundle-BadooGallery-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = BadooGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		C027F001DBCFAF5300DF1E5524CD76B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23D368851287DF55592D1852EDD10A8 /* BadooGallery.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BadooGallery/BadooGallery-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BadooGallery/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BadooGallery/BadooGallery.modulemap";
+				PRODUCT_NAME = BadooGallery;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C89ACD8DFA8CE26AC064999E67043D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D8F8C164AF111439358A78C50C7B7D1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE5898803A5FC39C84E231450EF318E9 /* Pods-BadooGallery_Example.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BadooGallery_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BadooGallery_Example/Pods-BadooGallery_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BadooGallery_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA129AEBF872E8CD8E7BBB3E19B2E5F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57346312056BE8B864BEA06407448A50 /* Pods-BadooGallery_Example.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BadooGallery_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BadooGallery_Example/Pods-BadooGallery_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BadooGallery_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C89ACD8DFA8CE26AC064999E67043D75 /* Debug */,
+				1D99C9C0981847E02EE16AE52A087623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50D8C193A8C075E650792683BF557748 /* Build configuration list for PBXNativeTarget "BadooGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C027F001DBCFAF5300DF1E5524CD76B9 /* Debug */,
+				36C7314C6C4373B21867C63616921C92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53CE5EC4AB80C4338DFF1619A2F36B8E /* Build configuration list for PBXNativeTarget "BadooGallery-BadooGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAF5FFFAD785941D9845A9ABD19476CE /* Debug */,
+				8826C17603E2A9F5833B7F9B92B6FD26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8DD6C32F9CB6EB7CF26D425ACF86E0A /* Build configuration list for PBXNativeTarget "Pods-BadooGallery_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB60BFEE3A34B9F498C83772A126CEE /* Debug */,
+				7D3931821001480D57CB896C690DC290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C25A01F84D966CC5F9FE75B8EA7A7C0C /* Build configuration list for PBXNativeTarget "Pods-BadooGallery_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA129AEBF872E8CD8E7BBB3E19B2E5F0 /* Debug */,
+				D8F8C164AF111439358A78C50C7B7D1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

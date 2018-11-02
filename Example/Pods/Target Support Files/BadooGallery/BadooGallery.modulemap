@@ -1,0 +1,6 @@
+framework module BadooGallery {
+  umbrella header "BadooGallery-umbrella.h"
+
+  export *
+  module * { export * }
+}
