@@ -1,6 +1,5 @@
 # BadooGallery
 
-[![CI Status](https://img.shields.io/travis/Bohdan Orlov/BadooGallery.svg?style=flat)](https://travis-ci.org/Bohdan Orlov/BadooGallery)
 [![Version](https://img.shields.io/cocoapods/v/BadooGallery.svg?style=flat)](https://cocoapods.org/pods/BadooGallery)
 [![License](https://img.shields.io/cocoapods/l/BadooGallery.svg?style=flat)](https://cocoapods.org/pods/BadooGallery)
 [![Platform](https://img.shields.io/cocoapods/p/BadooGallery.svg?style=flat)](https://cocoapods.org/pods/BadooGallery)
@@ -22,7 +21,7 @@ pod 'BadooGallery'
 
 ## Author
 
-Bohdan Orlov, bohdan.orlov@moonpig.com
+Victor Shamanov, https://github.com/wiruzx
 
 ## License
 

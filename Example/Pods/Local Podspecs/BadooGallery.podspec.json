@@ -9,10 +9,10 @@
     "file": "LICENSE"
   },
   "authors": {
-    "Bohdan Orlov": "bohdan.orlov@moonpig.com"
+    "Victor Shamanov": "https://github.com/wiruzx"
   },
   "source": {
-    "git": "https://github.com/Bohdan Orlov/BadooGallery.git",
+    "git": "https://github.com/badoo/Gallery.git",
     "tag": "0.1.9"
   },
   "platforms": {

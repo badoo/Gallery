@@ -24,7 +24,7 @@ Framework which allows building UI catalog of view components covered with snaps
   s.homepage         = 'https://github.com/badoo/Gallery'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Bohdan Orlov' => 'bohdan.orlov@moonpig.com' }
+  s.author           = { 'Victor Shamanov' => 'https://github.com/wiruzx' }
   s.source           = { :git => 'https://github.com/badoo/Gallery.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
