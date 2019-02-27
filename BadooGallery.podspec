@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BadooGallery'
-  s.version          = '0.1.9'
+  s.version          = '0.2'
   s.summary          = 'A UI catalog framework'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ Framework which allows building UI catalog of view components covered with snaps
 
   s.ios.deployment_target = '10.0'
 
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
   s.source_files = 'Gallery/**/*.{swift}'
   
   s.resource_bundles = {
