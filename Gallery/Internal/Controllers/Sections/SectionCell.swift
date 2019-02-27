@@ -34,7 +34,7 @@ final class SectionCell: UITableViewCell {
     private var itemId: ItemIdentifier?
     private var favoritesObserver: ObserverProtocol?
 
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         titleLabel = .makeTitleLabel()
         subtitleLabel = .makeSubtitleLabel()
         favoritesButton = UIButton()

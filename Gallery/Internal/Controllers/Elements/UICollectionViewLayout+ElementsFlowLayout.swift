@@ -29,7 +29,7 @@ import UIKit
 extension UICollectionViewLayout {
     static func makeElementsFlowLayout(insets: UIEdgeInsets) -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.sectionInset = insets
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 7
