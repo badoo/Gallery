@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 Framework which allows building UI catalog of view components covered with snapshots
                        DESC
 
-  s.homepage         = 'https://github.com/badoo/Gallery'
+  s.homepage         = 'https://github.com/photobox/Gallery'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Victor Shamanov' => 'https://github.com/wiruzx' }
-  s.source           = { :git => 'https://github.com/badoo/Gallery.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/photobox/Gallery.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
