@@ -102,7 +102,7 @@ public struct SnapshotTestsGenerator {
                 view.heightAnchor.constraint(equalToConstant: height).isActive = true
             }
 
-            view.sizeToFit()
+            container.layoutIfNeeded()
 
             testCase.verify(view: view)
         }
